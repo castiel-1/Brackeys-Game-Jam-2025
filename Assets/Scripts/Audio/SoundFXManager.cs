@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    [SerializeField] private AudioSource soundFXPrefab;
+    [SerializeField] private AudioSource _soundFXPrefab;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySoundFXClip(AudioClip clip, Transform spawnTransform, float volume)
     {
-        AudioSource audioSource = Instantiate(soundFXPrefab, spawnTransform.position, Quaternion.identity);
+        AudioSource audioSource = Instantiate(_soundFXPrefab, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = clip;
         audioSource.volume = volume;
