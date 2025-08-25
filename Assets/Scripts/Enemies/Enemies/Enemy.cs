@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static Action<Vector2> OnViewDirectionUpdated;
-
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private WaypointMover _waypointMover;
     [SerializeField] private VisionCone _visionCone;
@@ -18,17 +16,23 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        // set move speed in mover
-        _waypointMover.moveSpeed = _enemySO.moveSpeed;
+        if(_waypointMover  != null)
+        {
+            // set move speed in mover
+            _waypointMover.moveSpeed = _enemySO.moveSpeed;
 
-        // set initial enemy position
-        _lastPosition = transform.position;
+            // set initial enemy position
+            _lastPosition = transform.position;
 
-        // set initial view direction
-        _viewDirection = (_waypointMover.Waypoints[0].transform.position - transform.position).normalized;
-
+            // set initial view direction
+            _viewDirection = (_waypointMover.Waypoints[0].transform.position - transform.position).normalized;
+        }
+       
         // set viewAngle for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
+
+        _visionCone.DrawVisionCone(Vector2.right);
+        
     }
 
     private void FixedUpdate()
@@ -38,11 +42,11 @@ public class Enemy : MonoBehaviour
             return;
         }
 
+        // if player moves...
         if(((Vector2)transform.position - _lastPosition).sqrMagnitude > 0.0001f)
         {
+            // update view direction
             _viewDirection = ((Vector2)transform.position - _lastPosition).normalized;
-
-            OnViewDirectionUpdated?.Invoke(_viewDirection);
 
             _lastPosition = transform.position;
         }
