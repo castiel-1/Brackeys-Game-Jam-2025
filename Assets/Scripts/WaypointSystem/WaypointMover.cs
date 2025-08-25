@@ -6,21 +6,21 @@ public class WaypointMover : MonoBehaviour
     [SerializeField] private Transform _waypointParent;
     [SerializeField] private bool _loopPath = true;
 
-    public float moveSpeed; // set by enemy in awake
+    [HideInInspector] public float moveSpeed; // set by enemy in awake
+
+    public Vector2 viewDirection;
 
     private Waypoint[] _waypoints;
     private int _currentIndex;
     private bool _isWaiting;
+    private bool _movingForward = true;
 
+    public Waypoint[] Waypoints => _waypoints;
 
     private void Start()
     {
         _waypoints = new Waypoint[_waypointParent.childCount];
-
-        for(int i = 0; i < _waypointParent.childCount; i++)
-        {
-            _waypoints[i] = _waypointParent.GetComponentInChildren<Waypoint>();
-        }
+        _waypoints = _waypointParent.GetComponentsInChildren<Waypoint>();
     }
 
     // add if game paused: return
@@ -37,6 +37,7 @@ public class WaypointMover : MonoBehaviour
     private void MoveToWaypoint()
     {
         Waypoint currentWaypoint = _waypoints[_currentIndex];
+
         Vector2 position = currentWaypoint.transform.position;
 
         transform.position = Vector2.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
@@ -49,6 +50,40 @@ public class WaypointMover : MonoBehaviour
             {
                 StartCoroutine(WaitAtWaypointRoutine(currentWaypoint.WaitTime));
             }
+
+            // set index to next correct waypoint
+            // if loop...
+            if (_loopPath)
+            {
+                _currentIndex = (_currentIndex + 1) % _waypoints.Length;
+            }
+            // if back and forth...
+            else
+            {
+                if (_movingForward)
+                {
+                    if (_currentIndex == _waypoints.Length - 1)
+                    {
+                        _movingForward = false;
+                    }
+                    else
+                    {
+                        _currentIndex++;
+                    }
+                }
+                else
+                {
+                    if (_currentIndex == 0)
+                    {
+                        _movingForward = true;
+                    }
+                    else
+                    {
+                        _currentIndex--;
+                    }
+
+                }
+            }
         }
     }
 
@@ -57,8 +92,6 @@ public class WaypointMover : MonoBehaviour
         _isWaiting = true;
 
         yield return new WaitForSeconds(duration);
-
-        _currentIndex = _loopPath ? (_currentIndex + 1) % _waypoints.Length : Mathf.Min(_currentIndex++, _waypoints.Length);
 
         _isWaiting = false;
     }
