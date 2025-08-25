@@ -6,6 +6,6 @@ public class EnemySO : ScriptableObject
 {
     public Sprite sprite;
     public float moveSpeed;
-    [Range(0, 260)] public int visionAngle;
+    [Range(0, 260)] public int viewAngle;
     public float knockoutDuration;
 }

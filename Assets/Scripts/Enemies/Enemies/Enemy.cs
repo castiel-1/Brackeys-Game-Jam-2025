@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static Action<Vector2> OnViewDirectionUpdated;
+
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private WaypointMover _waypointMover;
+    [SerializeField] private VisionCone _visionCone;
 
     // vision cone 
 
@@ -14,10 +18,17 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        // set move speed in mover
         _waypointMover.moveSpeed = _enemySO.moveSpeed;
+
+        // set initial enemy position
         _lastPosition = transform.position;
 
+        // set initial view direction
         _viewDirection = (_waypointMover.Waypoints[0].transform.position - transform.position).normalized;
+
+        // set viewAngle for vision cone
+        _visionCone.ViewAngle = _enemySO.viewAngle;
     }
 
     private void FixedUpdate()
@@ -30,6 +41,9 @@ public class Enemy : MonoBehaviour
         if(((Vector2)transform.position - _lastPosition).sqrMagnitude > 0.0001f)
         {
             _viewDirection = ((Vector2)transform.position - _lastPosition).normalized;
+
+            OnViewDirectionUpdated?.Invoke(_viewDirection);
+
             _lastPosition = transform.position;
         }
 
@@ -38,21 +52,25 @@ public class Enemy : MonoBehaviour
 
     public void KnockOutGuard()
     {
+        // debugging
+        Debug.Log("enemy knocked out");
+
         if (!_isKnockedOut)
         {
-            _isKnockedOut = true;
-
-
             StartCoroutine(KnockOutRoutine());
         }
     }
 
     IEnumerator KnockOutRoutine()
     {
+        _isKnockedOut = true;
+        _waypointMover.enabled = false;
+
         float timer = _enemySO.knockoutDuration;
 
         yield return new WaitForSeconds(timer);
 
+        _waypointMover.enabled = true;
         _isKnockedOut = false;
     }
 }
