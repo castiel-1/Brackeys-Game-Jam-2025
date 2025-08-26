@@ -36,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.linearVelocity = new Vector2(0, _vertical * _moveSpeed);
         }
+        else
+        {
+            _rb.linearVelocity = Vector2.zero;
+        }
      
     }
 

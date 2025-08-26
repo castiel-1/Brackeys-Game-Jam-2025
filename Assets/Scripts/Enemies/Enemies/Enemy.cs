@@ -10,7 +10,18 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Vector2 _viewDirection;
 
     private bool _isKnockedOut = false;
-    private Vector2 _lastPosition;
+
+    private void OnEnable()
+    {
+        VisionCone.OnPlayerInVisionCone += RaiseAlertMeter;
+        WaypointMover.OnMovingToWaypoint += UpdateViewDirection;
+    }
+
+    private void OnDisable()
+    {
+        VisionCone.OnPlayerInVisionCone -= RaiseAlertMeter;
+        WaypointMover.OnMovingToWaypoint -= UpdateViewDirection;
+    }
 
     private void Start()
     {
@@ -18,38 +29,20 @@ public class Enemy : MonoBehaviour
         {
             // set move speed in mover
             _waypointMover.moveSpeed = _enemySO.moveSpeed;
-
-            // set initial enemy position
-            _lastPosition = transform.position;
-
-            // set initial view direction
-            _viewDirection = (_waypointMover.Waypoints[0].transform.position - transform.position).normalized;
         }
        
         // set viewAngle for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
-
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if(_isKnockedOut)
         {
             return;
         }
 
-        // if player moves...
-        if(((Vector2)transform.position - _lastPosition).sqrMagnitude > 0.0001f)
-        {
-            // update view direction
-            _viewDirection = ((Vector2)transform.position - _lastPosition).normalized;
-
-            _lastPosition = transform.position;
-
-            // redraw the vision cone
-            _visionCone.DrawVisionCone(_viewDirection);
-        }
-
+        // debugging
         Debug.DrawRay(transform.position, _viewDirection, Color.red);
     }
 
@@ -62,18 +55,39 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(KnockOutRoutine());
         }
+
+        // debugging
+        Debug.Log("enemy up again");
     }
 
     IEnumerator KnockOutRoutine()
     {
         _isKnockedOut = true;
-        _waypointMover.enabled = false;
+        if(_waypointMover) _waypointMover.enabled = false;
+        _visionCone.gameObject.SetActive(false);
 
         float timer = _enemySO.knockoutDuration;
 
         yield return new WaitForSeconds(timer);
 
-        _waypointMover.enabled = true;
+        _visionCone.gameObject.SetActive(true);
+        if(_waypointMover) _waypointMover.enabled = true;
         _isKnockedOut = false;
+    }
+
+    public void RaiseAlertMeter(float distanceToPlayer)
+    {
+        // debugging
+        Debug.Log("alert meter in enemy calculated");
+    }
+
+    public void UpdateViewDirection(Vector2 direction)
+    {
+        // debugging
+        Debug.Log("view direction in enemy updated");
+        _viewDirection = direction;
+
+        // set view direciton in vision cone
+        _visionCone.ViewDirection = _viewDirection;
     }
 }

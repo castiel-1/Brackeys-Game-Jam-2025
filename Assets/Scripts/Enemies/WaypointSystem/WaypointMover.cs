@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class WaypointMover : MonoBehaviour
 {
+    public static event Action<Vector2> OnMovingToWaypoint;
+
     [SerializeField] private Transform _waypointParent;
     [SerializeField] private bool _loopPath = true;
 
@@ -23,8 +26,8 @@ public class WaypointMover : MonoBehaviour
         _waypoints = _waypointParent.GetComponentsInChildren<Waypoint>();
     }
 
-    // add if game paused: return
-    void Update()
+    // TODO add if game paused: return
+    void FixedUpdate()
     {
         if (_isWaiting)
         {
@@ -32,6 +35,7 @@ public class WaypointMover : MonoBehaviour
         }
 
         MoveToWaypoint();
+        OnMovingToWaypoint?.Invoke(viewDirection);
     }
 
     private void MoveToWaypoint()
