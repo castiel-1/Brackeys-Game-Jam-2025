@@ -38,8 +38,12 @@ public class VisionCone : MonoBehaviour
         {
             Transform target = objectsInRange[0].transform;
 
+            // accounting for collider and sprite offset when using player position and converting to worldspace
+            CapsuleCollider2D col = target.GetComponent<CapsuleCollider2D>();
+            Vector2 colliderCenter = (Vector2)target.TransformPoint(col.offset);
+
             // get direction to player
-            Vector2 dirToPlayer = target.position - transform.position;
+            Vector2 dirToPlayer = colliderCenter - (Vector2) transform.position;
 
             // convert to angle
             float angleToPlayer = AngleFromDir(dirToPlayer);
@@ -49,14 +53,23 @@ public class VisionCone : MonoBehaviour
             {
                 float distanceToPlayer = dirToPlayer.magnitude;
 
-                // if nothing between guard and player...
-                if (!Physics2D.Raycast(transform.position, dirToPlayer, distanceToPlayer, _blockVisionLayer))
+                // collider y size to world space
+                float colliderHeight = col.size.y * target.lossyScale.y;
+
+                Vector2 dirToHead = dirToPlayer + new Vector2(0, colliderHeight/2f);
+                Vector2 dirToFeet = dirToPlayer - new Vector2(0, colliderHeight/2f);
+
+                // debugging
+                Debug.DrawRay(transform.position, dirToPlayer, Color.blue);
+                Debug.DrawRay(transform.position, dirToHead, Color.yellow);
+                Debug.DrawRay(transform.position, dirToFeet, Color.green);
+
+                // if nothing between guard and player head or player feet...
+                if (!Physics2D.Raycast(transform.position, dirToHead, distanceToPlayer, _blockVisionLayer) ||
+                    !Physics2D.Raycast(transform.position, dirToFeet, distanceToPlayer, _blockVisionLayer))
                 {
                     // tell enemy that player is being detected
                     OnPlayerInVisionCone?.Invoke(distanceToPlayer);
-
-                    // debugging
-                    Debug.Log("player detected!");
                 }
             }
         }
@@ -126,9 +139,9 @@ public class VisionCone : MonoBehaviour
     private float AngleFromDir (Vector2 dir)
     {
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if(angle < 0)
+        if(angle > 180)
         {
-            angle += 360;
+            angle = 360 - angle;
         }
 
         return angle;

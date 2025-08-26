@@ -91,7 +91,7 @@ public class Enemy : MonoBehaviour
 
 
         // debugging
-        Debug.Log("alert meter raised by enemy by: " +  alertValue);
+        Debug.Log("alert meter raised in player by: " +  alertValue);
 
         AlertMeterEvent.OnAlertMeterRaised?.Invoke(alertValue * Time.deltaTime); // because detection runs in update we need to scale the raise here
     }
