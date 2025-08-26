@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 1beae08ea3e8556498bb6a1fc5c2d067
+guid: c2976959c98d82446985c8b424d1f80a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9033162075642301625
-    second: Guard Walk_0
+      213: -1272677867225930765
+    second: Office_0
   - first:
-      213: 3618169764047167644
-    second: Guard Walk_1
+      213: -6266501556836466072
+    second: Office_1
   - first:
-      213: -6171041783823814159
-    second: Guard Walk_2
+      213: -6997113423519045369
+    second: Office_2
   - first:
-      213: 506786935788560159
-    second: Guard Walk_3
+      213: -3040024209331997865
+    second: Office_3
   - first:
-      213: -4311049377616825397
-    second: Guard Walk_4
+      213: -681493647558315352
+    second: Office_4
   - first:
-      213: -6160000399787636989
-    second: Guard Walk_5
-  - first:
-      213: 4642695899615872087
-    second: Guard Walk_6
+      213: 4584551018348753140
+    second: Office_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 84
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,8 +89,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,155 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guard Walk_0
+      name: Office_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 18
+        x: 20
+        y: 1
         width: 18
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7437fc2b3f2c3a280800000000000000
-      internalID: -9033162075642301625
+      spriteID: 3f32f72093a865ee0800000000000000
+      internalID: -1272677867225930765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guard Walk_1
+      name: Office_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 18
-        width: 20
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9027130b32563230800000000000000
-      internalID: 3618169764047167644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_2
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 18
-        width: 26
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f1b615713e0c5aa0800000000000000
-      internalID: -6171041783823814159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_3
-      rect:
-        serializedVersion: 2
-        x: 292
-        y: 18
-        width: 15
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1f5c747808780700800000000000000
-      internalID: 506786935788560159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_4
-      rect:
-        serializedVersion: 2
-        x: 375
-        y: 19
-        width: 19
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc3faf59e631c24c0800000000000000
-      internalID: -4311049377616825397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_5
-      rect:
-        serializedVersion: 2
-        x: 457
-        y: 18
-        width: 21
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 307c4620648438aa0800000000000000
-      internalID: -6160000399787636989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_6
-      rect:
-        serializedVersion: 2
-        x: 541
-        y: 18
+        x: 39
+        y: 1
         width: 18
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75444c8925b2e6040800000000000000
-      internalID: 4642695899615872087
+      spriteID: 8628450190ae809a0800000000000000
+      internalID: -6266501556836466072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709a702e96245ee90800000000000000
+      internalID: -6997113423519045369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753bd2e961aafc5d0800000000000000
+      internalID: -3040024209331997865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2f9946329da86f0800000000000000
+      internalID: -681493647558315352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f035577cd89f9f30800000000000000
+      internalID: 4584551018348753140
       vertices: []
       indices: 
       edges: []
@@ -275,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3b1aeab871934ad4f80acc0c2532972f
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -284,14 +259,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Guard Walk_0: -9033162075642301625
-      Guard Walk_1: 3618169764047167644
-      Guard Walk_2: -6171041783823814159
-      Guard Walk_3: 506786935788560159
-      Guard Walk_4: -4311049377616825397
-      Guard Walk_5: -6160000399787636989
-      Guard Walk_6: 4642695899615872087
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

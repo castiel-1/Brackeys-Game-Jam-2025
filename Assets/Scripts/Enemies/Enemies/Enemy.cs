@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private WaypointMover _waypointMover;
     [SerializeField] private VisionCone _visionCone;
     [SerializeField] private Vector2 _viewDirection;
+    [SerializeField] private SpriteRenderer _sr;
 
     private bool _isKnockedOut = false;
 
@@ -35,6 +36,13 @@ public class Enemy : MonoBehaviour
         // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
         _visionCone.ViewDistance = _enemySO.viewDistance;
+
+        // if the initial viewDirection is left we flip sprite
+        if(_viewDirection.x < 0)
+        {
+            _sr.flipX = true;
+        }
+        
     }
 
     private void Update()
@@ -101,6 +109,17 @@ public class Enemy : MonoBehaviour
         // debugging
         Debug.Log("view direction in enemy updated");
         _viewDirection = direction;
+
+
+        Debug.Log("view direction.x : " + _viewDirection.x);
+        if(_viewDirection.x > 0)
+        {
+            _sr.flipX = false;
+        }
+        else
+        {
+            _sr.flipX = true;
+        }
 
         // set view direciton in vision cone
         _visionCone.ViewDirection = _viewDirection;

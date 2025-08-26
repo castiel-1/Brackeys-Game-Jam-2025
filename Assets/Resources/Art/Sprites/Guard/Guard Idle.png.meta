@@ -109,8 +109,8 @@ TextureImporter:
       name: Guard Idle_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 19
+        x: 43
+        y: 18
         width: 15
         height: 51
       alignment: 7
@@ -131,8 +131,8 @@ TextureImporter:
       name: Guard Idle_1
       rect:
         serializedVersion: 2
-        x: 109
-        y: 19
+        x: 126
+        y: 18
         width: 15
         height: 50
       alignment: 7
@@ -153,8 +153,8 @@ TextureImporter:
       name: Guard Idle_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 19
+        x: 209
+        y: 18
         width: 15
         height: 51
       alignment: 7

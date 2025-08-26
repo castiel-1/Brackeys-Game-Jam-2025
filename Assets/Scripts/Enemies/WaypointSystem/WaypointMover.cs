@@ -11,11 +11,12 @@ public class WaypointMover : MonoBehaviour
 
     [HideInInspector] public float moveSpeed; // set by enemy in awake
 
-    private Vector2 _viewDirection;
+    private Vector2 _viewDirection = Vector2.zero;
     private Waypoint[] _waypoints;
     private int _currentIndex;
     private bool _isWaiting;
     private bool _movingForward = true;
+    private Animator _animator;
 
     public Waypoint[] Waypoints => _waypoints;
 
@@ -23,6 +24,8 @@ public class WaypointMover : MonoBehaviour
     {
         _waypoints = new Waypoint[_waypointParent.childCount];
         _waypoints = _waypointParent.GetComponentsInChildren<Waypoint>();
+
+        _animator = GetComponent<Animator>();
     }
 
     // TODO add if game paused: return
@@ -34,6 +37,7 @@ public class WaypointMover : MonoBehaviour
         }
 
         MoveToWaypoint();
+
         OnMovingToWaypoint?.Invoke(_viewDirection);
     }
 
@@ -44,6 +48,8 @@ public class WaypointMover : MonoBehaviour
         Vector2 position = currentWaypoint.transform.position;
 
         transform.position = Vector2.MoveTowards(transform.position, position, moveSpeed * Time.deltaTime);
+
+        _viewDirection = position - (Vector2)transform.position;
 
         // if we are close to the target waypoint...
         if(Vector2.Distance(transform.position, position) < 0.1f)
@@ -94,8 +100,12 @@ public class WaypointMover : MonoBehaviour
     {
         _isWaiting = true;
 
+        _animator.SetBool("isMoving", false);
+
         yield return new WaitForSeconds(duration);
 
         _isWaiting = false;
+
+        _animator.SetBool("isMoving", true);
     }
 }
