@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
         Debug.DrawRay(transform.position, _viewDirection, Color.red);
     }
 
-    public void KnockOutGuard()
+    public void KnockOutEnemy()
     {
         // debugging
         Debug.Log("enemy knocked out");
@@ -104,6 +104,21 @@ public class Enemy : MonoBehaviour
 
         // set view direciton in vision cone
         _visionCone.ViewDirection = _viewDirection;
+    }
+
+    public void DisableVisionCone(float seconds)
+    {
+        // debugging
+        Debug.Log("disabled enemy vision cone for: " + seconds + " seconds");
+
+        StartCoroutine(DisableVisionConeRoutine(seconds));
+    }
+
+    IEnumerator DisableVisionConeRoutine(float seconds)
+    {
+        _visionCone.enabled = false;
+        yield return new WaitForSeconds(seconds);
+        _visionCone.enabled = true;
     }
 
 }

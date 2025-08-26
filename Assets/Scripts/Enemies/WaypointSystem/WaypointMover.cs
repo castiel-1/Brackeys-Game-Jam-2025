@@ -11,8 +11,7 @@ public class WaypointMover : MonoBehaviour
 
     [HideInInspector] public float moveSpeed; // set by enemy in awake
 
-    public Vector2 viewDirection;
-
+    private Vector2 _viewDirection;
     private Waypoint[] _waypoints;
     private int _currentIndex;
     private bool _isWaiting;
@@ -35,7 +34,7 @@ public class WaypointMover : MonoBehaviour
         }
 
         MoveToWaypoint();
-        OnMovingToWaypoint?.Invoke(viewDirection);
+        OnMovingToWaypoint?.Invoke(_viewDirection);
     }
 
     private void MoveToWaypoint()
