@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf25e97d6ea49c449db6cd2ee719c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rayCount: 10
+  _rayCount: 20
   _viewRadius: 40
   _blockVisionLayer:
     serializedVersion: 2
@@ -4930,7 +4930,7 @@ Transform:
   m_GameObject: {fileID: 1454601088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.82, y: -1.89, z: 0}
+  m_LocalPosition: {x: 2.98, y: 2.56, z: 0}
   m_LocalScale: {x: 0.72, y: 0.72, z: 0.72}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5732,7 +5732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf25e97d6ea49c449db6cd2ee719c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rayCount: 10
+  _rayCount: 20
   _viewRadius: 40
   _blockVisionLayer:
     serializedVersion: 2
