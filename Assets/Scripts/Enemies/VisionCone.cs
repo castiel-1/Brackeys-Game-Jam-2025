@@ -7,11 +7,11 @@ public class VisionCone : MonoBehaviour
     public static event Action<float> OnPlayerInVisionCone;
 
     [SerializeField] private int _rayCount = 10; // how many rays we draw all together
-    [SerializeField] private float _viewRadius = 40;
     [SerializeField] private LayerMask _blockVisionLayer;
     [SerializeField] private LayerMask _playerLayer;
 
     [HideInInspector] public float ViewAngle; // gets set by enemy in start
+    [HideInInspector] public float ViewDistance; // gets set by enemy in start
     [HideInInspector] public Vector2 ViewDirection; // gets set by enemy when changed
 
     private Mesh _mesh;
@@ -31,7 +31,7 @@ public class VisionCone : MonoBehaviour
     public void DetectPlayer()
     {
         // do circle raycast to see if player is in radius
-        Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, _viewRadius, _playerLayer);
+        Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, ViewDistance, _playerLayer);
         
         // if we detect the player in range...
         if(objectsInRange.Length > 0)
@@ -79,14 +79,14 @@ public class VisionCone : MonoBehaviour
 
         for (int i = 0; i < _rayCount; i++)
         {
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, DirFromAngle(angle), _viewRadius, _blockVisionLayer);
+            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, DirFromAngle(angle), ViewDistance, _blockVisionLayer);
 
             Vector3 vertex;
 
             // if no hit...
             if(hitInfo.collider == null)
             {
-                vertex = DirFromAngle(angle) * _viewRadius;
+                vertex = DirFromAngle(angle) * ViewDistance;
             }
             // if hit...
             else

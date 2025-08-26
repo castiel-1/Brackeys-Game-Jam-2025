@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class Enemy : MonoBehaviour
 {
@@ -31,8 +32,9 @@ public class Enemy : MonoBehaviour
             _waypointMover.moveSpeed = _enemySO.moveSpeed;
         }
        
-        // set viewAngle for vision cone
+        // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
+        _visionCone.ViewDistance = _enemySO.viewDistance;
     }
 
     private void Update()
@@ -77,8 +79,21 @@ public class Enemy : MonoBehaviour
 
     public void RaiseAlertMeter(float distanceToPlayer)
     {
+        float clampedDistance = Mathf.Clamp(distanceToPlayer, 0, _enemySO.viewDistance);
+
+        // if we are closer to player the value is closer to 0
+        float t = Mathf.InverseLerp(0, _enemySO.viewDistance, clampedDistance);
+
+        // if we are closer to 0 the raise is greater
+        float raise = 1f - (t * t);
+
+        float alertValue = Mathf.Lerp(_enemySO.minimumAlertRaiseSpeed, _enemySO.maximumAlertRaiseSpeed, raise);
+
+
         // debugging
-        Debug.Log("alert meter in enemy calculated");
+        Debug.Log("alert meter raised by enemy by: " +  alertValue);
+
+        AlertMeterEvent.OnAlertMeterRaised?.Invoke(alertValue * Time.deltaTime); // because detection runs in update we need to scale the raise here
     }
 
     public void UpdateViewDirection(Vector2 direction)
@@ -90,4 +105,5 @@ public class Enemy : MonoBehaviour
         // set view direciton in vision cone
         _visionCone.ViewDirection = _viewDirection;
     }
+
 }

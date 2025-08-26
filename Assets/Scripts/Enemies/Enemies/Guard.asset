@@ -15,4 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   moveSpeed: 5
   viewAngle: 90
+  viewDistance: 10
   knockoutDuration: 5
+  minimumAlertRaiseSpeed: 5
+  maximumAlertRaiseSpeed: 25
