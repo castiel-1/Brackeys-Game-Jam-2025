@@ -1,16 +1,39 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryDisplayer : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject _itemHolder;
+    [SerializeField] private GameObject _itemUIPrefab;
+
+    private Dictionary<GameObject, GameObject> _itemUIDict = new();
+
+    private void OnEnable()
     {
-        
+        InventoryController.OnItemAddedToInventory += SpawnItemInUI;
+        InventoryController.OnItemRemovedFromInventory += DespawnItemInUI;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        InventoryController.OnItemAddedToInventory -= SpawnItemInUI;
+        InventoryController.OnItemRemovedFromInventory -= DespawnItemInUI;
     }
+
+    public void SpawnItemInUI(GameObject item)
+    {
+        GameObject itemUI = Instantiate(_itemUIPrefab, _itemHolder.transform);
+
+        _itemUIDict.Add(item, itemUI);
+    }
+
+    public void DespawnItemInUI(GameObject item)
+    {
+        GameObject itemUI = _itemUIDict[item];
+
+        Destroy(itemUI);
+
+        _itemUIDict.Remove(item);   
+    }
+
 }
