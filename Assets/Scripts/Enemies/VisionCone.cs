@@ -37,8 +37,6 @@ public class VisionCone : MonoBehaviour
         {
             Vector3 vertex = DirFromAngle(angle) * viewRadius;
 
-            // debugging
-            Debug.Log("vertexindex: " + vertexIndex);
             vertices[vertexIndex] = vertex;
 
             if(i > 0)
@@ -53,20 +51,17 @@ public class VisionCone : MonoBehaviour
             vertexIndex++;
 
             angle -= angleStepSize;
+
         }
 
         // give vertices and triangles to mesh
-
-        //debugging
-        
-        if(mesh == null) Debug.Log("mesh is null");
         mesh.vertices = vertices;
         mesh.triangles = triangles;
     }
 
     private Vector3 DirFromAngle(float angleInDegrees)
     {
-        Vector3 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * angleInDegrees), Mathf.Sin(Mathf.Deg2Rad * angleInDegrees));
+        Vector3 direction = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angleInDegrees), Mathf.Sin(Mathf.Deg2Rad * angleInDegrees), 0);
 
         return direction;
     }

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   moveSpeed: 5
-  visionAngle: 45
+  viewAngle: 90
   knockoutDuration: 5

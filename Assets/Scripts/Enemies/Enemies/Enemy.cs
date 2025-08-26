@@ -7,10 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private WaypointMover _waypointMover;
     [SerializeField] private VisionCone _visionCone;
+    [SerializeField] private Vector2 _viewDirection;
 
-    // vision cone 
-
-    private Vector2 _viewDirection;
     private bool _isKnockedOut = false;
     private Vector2 _lastPosition;
 
@@ -31,8 +29,6 @@ public class Enemy : MonoBehaviour
         // set viewAngle for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
 
-        _visionCone.DrawVisionCone(Vector2.right);
-        
     }
 
     private void FixedUpdate()
@@ -49,6 +45,9 @@ public class Enemy : MonoBehaviour
             _viewDirection = ((Vector2)transform.position - _lastPosition).normalized;
 
             _lastPosition = transform.position;
+
+            // redraw the vision cone
+            _visionCone.DrawVisionCone(_viewDirection);
         }
 
         Debug.DrawRay(transform.position, _viewDirection, Color.red);

@@ -5217,6 +5217,7 @@ MonoBehaviour:
   _enemySO: {fileID: 11400000, guid: aefda51ff3f91d542813f2bcd2d66cea, type: 2}
   _waypointMover: {fileID: 1463954461}
   _visionCone: {fileID: 1737554090}
+  _viewDirection: {x: 0, y: 0}
 --- !u!114 &1463954461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6405,6 +6406,7 @@ MonoBehaviour:
   _enemySO: {fileID: 11400000, guid: aefda51ff3f91d542813f2bcd2d66cea, type: 2}
   _waypointMover: {fileID: 0}
   _visionCone: {fileID: 362028008}
+  _viewDirection: {x: 1, y: 0}
 --- !u!61 &1944110369
 BoxCollider2D:
   m_ObjectHideFlags: 0
