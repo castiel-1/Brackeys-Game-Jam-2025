@@ -20,11 +20,7 @@ public class InteractionDetector : MonoBehaviour
             string displayMessage = _interactableInRange?.Interact();
             StartCoroutine(DisplayInteractMessageRoutine(displayMessage));
 
-            // take icon away if interaction is over
-            if (_interactableInRange.CanInteract())
-            {
-                _interactionPrompt.SetActive(false);
-            }
+            _interactionPrompt.SetActive(false);
         }
     }
 
