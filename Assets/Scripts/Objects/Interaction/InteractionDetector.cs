@@ -1,8 +1,12 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class InteractionDetector : MonoBehaviour
 {
     [SerializeField] private GameObject _interactionPrompt;
+    [SerializeField] private TextMeshPro _interactMessage;
+    [SerializeField] private float _displayTime = 2f;
 
     private IInteractable _interactableInRange = null;
 
@@ -13,7 +17,8 @@ public class InteractionDetector : MonoBehaviour
             // debugging
             Debug.Log("E was pressed");
 
-            _interactableInRange?.Intearct();
+            string displayMessage = _interactableInRange?.Interact();
+            StartCoroutine(DisplayInteractMessageRoutine(displayMessage));
 
             // take icon away if interaction is over
             if (_interactableInRange.CanInteract())
@@ -21,6 +26,15 @@ public class InteractionDetector : MonoBehaviour
                 _interactionPrompt.SetActive(false);
             }
         }
+    }
+
+    IEnumerator DisplayInteractMessageRoutine(string message)
+    {
+        _interactMessage.text = message;
+
+        yield return new WaitForSeconds(_displayTime);
+
+        _interactMessage.text = "";
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

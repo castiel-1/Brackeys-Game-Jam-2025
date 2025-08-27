@@ -23,12 +23,9 @@ public class AlertMeterManager : MonoBehaviour
 
     private void RaiseAlertMeter(float amount)
     {
-        // debugging
-        Debug.Log("alert meter raised in alert meter");
-
         if(_slider.value + amount >= _alertMeterMax)
         {
-            // restart level, fail screen
+            // TODO restart level, fail screen
         }
 
         _slider.value += amount;

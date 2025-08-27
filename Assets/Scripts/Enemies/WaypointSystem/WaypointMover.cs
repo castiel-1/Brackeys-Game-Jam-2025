@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaypointMover : MonoBehaviour
 {
-    public static event Action<Vector2> OnMovingToWaypoint;
+    public event Action<Vector2> OnMovingToWaypoint;
 
     [SerializeField] private Transform _waypointParent;
     [SerializeField] private bool _loopPath = true;
@@ -26,6 +26,7 @@ public class WaypointMover : MonoBehaviour
         _waypoints = _waypointParent.GetComponentsInChildren<Waypoint>();
 
         _animator = GetComponent<Animator>();
+
     }
 
     // TODO add if game paused: return
@@ -38,7 +39,6 @@ public class WaypointMover : MonoBehaviour
 
         MoveToWaypoint();
 
-        OnMovingToWaypoint?.Invoke(_viewDirection);
     }
 
     private void MoveToWaypoint()
@@ -59,6 +59,8 @@ public class WaypointMover : MonoBehaviour
             {
                 StartCoroutine(WaitAtWaypointRoutine(currentWaypoint.WaitTime));
             }
+
+            int prevIndex = _currentIndex;
 
             // set index to next correct waypoint
             // if loop...
@@ -92,6 +94,15 @@ public class WaypointMover : MonoBehaviour
                     }
 
                 }
+            }
+
+            // update view direction
+            if (_currentIndex != prevIndex)
+            {
+                Vector2 newTarget = _waypoints[_currentIndex].transform.position;
+                _viewDirection = (newTarget - (Vector2)transform.position).normalized;
+
+                OnMovingToWaypoint?.Invoke(_viewDirection);
             }
         }
     }

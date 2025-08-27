@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VisionCone : MonoBehaviour
 {
-    public static event Action<float> OnPlayerInVisionCone;
+    public event Action<float> OnPlayerInVisionCone;
 
     [SerializeField] private int _rayCount = 10; // how many rays we draw all together
     [SerializeField] private LayerMask _blockVisionLayer;
@@ -45,8 +45,11 @@ public class VisionCone : MonoBehaviour
             // get direction to player
             Vector2 dirToPlayer = colliderCenter - (Vector2) transform.position;
 
+            // debugging
+            Debug.DrawRay(transform.position, dirToPlayer, Color.white);
+
             // convert to angle
-            float angleToPlayer = AngleFromDir(dirToPlayer);
+            float angleToPlayer = Vector2.Angle(ViewDirection, dirToPlayer);
 
             // if player position is in fov
             if(angleToPlayer < (ViewAngle / 2f))
@@ -139,10 +142,6 @@ public class VisionCone : MonoBehaviour
     private float AngleFromDir (Vector2 dir)
     {
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        if(angle > 180)
-        {
-            angle = 360 - angle;
-        }
 
         return angle;
     }

@@ -15,23 +15,20 @@ public class Enemy : MonoBehaviour
 
     private void OnEnable()
     {
-        VisionCone.OnPlayerInVisionCone += RaiseAlertMeter;
-        WaypointMover.OnMovingToWaypoint += UpdateViewDirection;
+        _visionCone.OnPlayerInVisionCone += RaiseAlertMeter;
+        _waypointMover.OnMovingToWaypoint += UpdateViewDirection;
     }
 
     private void OnDisable()
     {
-        VisionCone.OnPlayerInVisionCone -= RaiseAlertMeter;
-        WaypointMover.OnMovingToWaypoint -= UpdateViewDirection;
+        _visionCone.OnPlayerInVisionCone -= RaiseAlertMeter;
+        _waypointMover.OnMovingToWaypoint -= UpdateViewDirection;
     }
 
     private void Start()
     {
-        if(_waypointMover  != null)
-        {
-            // set move speed in mover
-            _waypointMover.moveSpeed = _enemySO.moveSpeed;
-        }
+        // set move speed in mover
+        _waypointMover.moveSpeed = _enemySO.moveSpeed;
        
         // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _enemySO.viewAngle;
@@ -97,21 +94,13 @@ public class Enemy : MonoBehaviour
 
         float alertValue = Mathf.Lerp(_enemySO.minimumAlertRaiseSpeed, _enemySO.maximumAlertRaiseSpeed, raise);
 
-
-        // debugging
-        Debug.Log("alert meter raised in player by: " +  alertValue);
-
         AlertMeterEvent.OnAlertMeterRaised?.Invoke(alertValue * Time.deltaTime); // because detection runs in update we need to scale the raise here
     }
 
     public void UpdateViewDirection(Vector2 direction)
     {
-        // debugging
-        Debug.Log("view direction in enemy updated");
         _viewDirection = direction;
 
-
-        Debug.Log("view direction.x : " + _viewDirection.x);
         if(_viewDirection.x > 0)
         {
             _sr.flipX = false;

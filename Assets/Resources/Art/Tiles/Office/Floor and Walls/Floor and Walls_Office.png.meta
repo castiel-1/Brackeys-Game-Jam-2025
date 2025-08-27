@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: c2976959c98d82446985c8b424d1f80a
+guid: 43d164de5ad915b449c02f75e2a65a50
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1272677867225930765
-    second: Office_0
+      213: 1974436712362013322
+    second: Floor and Walls_Office_0
   - first:
-      213: -6266501556836466072
-    second: Office_1
+      213: 4414103433361628302
+    second: Floor and Walls_Office_1
   - first:
-      213: -6997113423519045369
-    second: Office_2
+      213: -9126934438457605028
+    second: Floor and Walls_Office_2
   - first:
-      213: -3040024209331997865
-    second: Office_3
+      213: -7662660073138208217
+    second: Floor and Walls_Office_3
   - first:
-      213: -681493647558315352
-    second: Office_4
+      213: 5241757608816969599
+    second: Floor and Walls_Office_4
   - first:
-      213: 4584551018348753140
-    second: Office_5
+      213: -482350876234884707
+    second: Floor and Walls_Office_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Office_0
+      name: Floor and Walls_Office_0
       rect:
         serializedVersion: 2
         x: 20
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f32f72093a865ee0800000000000000
-      internalID: -1272677867225930765
+      spriteID: a82f3d79abb966b10800000000000000
+      internalID: 1974436712362013322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Office_1
+      name: Floor and Walls_Office_1
       rect:
         serializedVersion: 2
         x: 39
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8628450190ae809a0800000000000000
-      internalID: -6266501556836466072
+      spriteID: e8c1a5b8fab024d30800000000000000
+      internalID: 4414103433361628302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Office_2
+      name: Floor and Walls_Office_2
       rect:
         serializedVersion: 2
         x: 58
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 709a702e96245ee90800000000000000
-      internalID: -6997113423519045369
+      spriteID: c54847b1c7d965180800000000000000
+      internalID: -9126934438457605028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Office_3
+      name: Floor and Walls_Office_3
       rect:
         serializedVersion: 2
         x: 77
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 753bd2e961aafc5d0800000000000000
-      internalID: -3040024209331997865
+      spriteID: 72247021343c8a590800000000000000
+      internalID: -7662660073138208217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Office_4
+      name: Floor and Walls_Office_4
       rect:
         serializedVersion: 2
         x: 96
@@ -218,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a2f9946329da86f0800000000000000
-      internalID: -681493647558315352
+      spriteID: f778c30f5c67eb840800000000000000
+      internalID: 5241757608816969599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Office_5
+      name: Floor and Walls_Office_5
       rect:
         serializedVersion: 2
         x: 115
@@ -240,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f035577cd89f9f30800000000000000
-      internalID: 4584551018348753140
+      spriteID: d99dbe40f685e49f0800000000000000
+      internalID: -482350876234884707
       vertices: []
       indices: 
       edges: []

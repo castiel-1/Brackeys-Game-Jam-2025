@@ -2,14 +2,30 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    private InventoryController _inventoryController;
+
     private bool _isLocked = true;
 
-    public void Intearct()
+    private void Start()
     {
-        if (CanInteract())
+        _inventoryController = FindFirstObjectByType<InventoryController>();
+
+    }
+
+    public string Interact()
+    {
+        if (_inventoryController.HasItem("key"))
         {
             Unlock();
+            _inventoryController.RemoveItemFromInventory("key");
+
+            return "Door unlocked!";
         }
+        else
+        {
+            return "It's locked...";
+        }
+
     }
 
     public bool CanInteract()

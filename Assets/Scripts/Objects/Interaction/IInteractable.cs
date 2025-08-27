@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface IInteractable 
 {
-    public void Intearct();
+    public string Interact(); // string is message to be displayed after interaction
     public bool CanInteract();
 }

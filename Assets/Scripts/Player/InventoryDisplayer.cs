@@ -6,7 +6,7 @@ public class InventoryDisplayer : MonoBehaviour
     [SerializeField] private GameObject _itemHolder;
     [SerializeField] private GameObject _itemUIPrefab;
 
-    private Dictionary<GameObject, GameObject> _itemUIDict = new();
+    private Dictionary<string, GameObject> _itemUIDict = new();
 
     private void OnEnable()
     {
@@ -20,14 +20,14 @@ public class InventoryDisplayer : MonoBehaviour
         InventoryController.OnItemRemovedFromInventory -= DespawnItemInUI;
     }
 
-    public void SpawnItemInUI(GameObject item)
+    public void SpawnItemInUI(string item)
     {
         GameObject itemUI = Instantiate(_itemUIPrefab, _itemHolder.transform);
 
         _itemUIDict.Add(item, itemUI);
     }
 
-    public void DespawnItemInUI(GameObject item)
+    public void DespawnItemInUI(string item)
     {
         GameObject itemUI = _itemUIDict[item];
 

@@ -5,29 +5,39 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    public static event Action<GameObject> OnItemAddedToInventory;
-    public static event Action<GameObject> OnItemRemovedFromInventory;
+    public static event Action<string> OnItemAddedToInventory;
+    public static event Action<string> OnItemRemovedFromInventory;
 
-    private List<GameObject> _itemsInInventory = new();
+    private List<string> _itemsInInventory = new();
 
-    public void AddItemToInventory(GameObject item)
+    public void AddItemToInventory(string item)
     {
         // debugging
-        Debug.Log("item " + item.name + " added to inventory");
+        Debug.Log("item " + item + " added to inventory");
 
         _itemsInInventory.Add(item);
 
         OnItemAddedToInventory?.Invoke(item);
     }
 
-    public void RemoveItemFromInventory(GameObject item)
+    public void RemoveItemFromInventory(string item)
     {
         // debugging
-        Debug.Log("item " + item.name + " removed from inventory");
+        Debug.Log("item " + item + " removed from inventory");
 
         _itemsInInventory.Remove(item);
 
         OnItemRemovedFromInventory?.Invoke(item);
+    }
+
+    public bool HasItem(string item)
+    {
+        return _itemsInInventory.Contains(item);
+    }
+
+    public void GetItem(GameObject item)
+    {
+        
     }
 
 }
