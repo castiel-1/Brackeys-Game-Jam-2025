@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: beee1eda725b56a4d9aef80fbb540145
+guid: 17ea4d3e1f468eb4791f297487348b86
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5422267212433142362
-    second: Guard Idle_0
+      213: 7025021444464866208
+    second: Door_Horizontal_0
   - first:
-      213: 6815393169697043558
-    second: Guard Idle_1
-  - first:
-      213: -7866911525399595432
-    second: Guard Idle_2
+      213: 6987284099823599336
+    second: Door_Horizontal_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,67 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guard Idle_0
+      name: Door_Horizontal_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 18
-        width: 15
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 12
+        y: 10
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6adccadd2bc30c4b0800000000000000
-      internalID: -5422267212433142362
+      spriteID: 0a374d898c3ed7160800000000000000
+      internalID: 7025021444464866208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guard Idle_1
+      name: Door_Horizontal_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 18
-        width: 15
-        height: 50
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 345
+        y: 10
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6647a647af3259e50800000000000000
-      internalID: 6815393169697043558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Idle_2
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 18
-        width: 15
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8567129f5ad13d290800000000000000
-      internalID: -7866911525399595432
+      spriteID: 8ee78ba5ed1d7f060800000000000000
+      internalID: 6987284099823599336
       vertices: []
       indices: 
       edges: []
@@ -175,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c6a51afb1e9d1443a828f3a1ccfe05e
+    spriteID: 611ec9e913a760640822a4e888cf11a6
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guard Idle_0: -5422267212433142362
-      Guard Idle_1: 6815393169697043558
-      Guard Idle_2: -7866911525399595432
+      Door_Horizontal_0: 7025021444464866208
+      Door_Horizontal_1: 6987284099823599336
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

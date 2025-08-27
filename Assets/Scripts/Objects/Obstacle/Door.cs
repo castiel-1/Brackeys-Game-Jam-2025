@@ -5,11 +5,12 @@ public class Door : MonoBehaviour, IInteractable
     private InventoryController _inventoryController;
 
     private bool _isLocked = true;
+    private Animator _animator;
 
-    private void Start()
+    private void Awake()
     {
         _inventoryController = FindFirstObjectByType<InventoryController>();
-
+        _animator = GetComponent<Animator>();
     }
 
     public string Interact()
@@ -25,7 +26,7 @@ public class Door : MonoBehaviour, IInteractable
         {
             return "It's locked...";
         }
-
+        
     }
 
     public bool CanInteract()
@@ -40,6 +41,7 @@ public class Door : MonoBehaviour, IInteractable
         Debug.Log("opened door");
 
         _isLocked = false;
+        _animator.SetBool("isOpen", true);
 
         //disable the door collider
         GetComponent<BoxCollider2D>().enabled = false;

@@ -6,10 +6,12 @@ public class Item : MonoBehaviour, IInteractable
 
     private bool _isPickedUp = false;
     private InventoryController _inventoryController;
+    private Sprite _sprite;
 
     private void Awake()
     {
         _inventoryController = FindFirstObjectByType<InventoryController>();
+        _sprite = GetComponent<Sprite>();
     }
 
     public bool CanInteract()
@@ -19,7 +21,7 @@ public class Item : MonoBehaviour, IInteractable
 
     public string Interact()
     {
-        _inventoryController.AddItemToInventory(_itemID);
+        _inventoryController.AddItemToInventory(_itemID, _sprite);
         gameObject.SetActive(false);
 
         return "Picked up " + _itemID + "!";

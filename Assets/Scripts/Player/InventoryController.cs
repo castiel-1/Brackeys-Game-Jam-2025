@@ -5,19 +5,19 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    public static event Action<string> OnItemAddedToInventory;
+    public static event Action<string, Sprite> OnItemAddedToInventory;
     public static event Action<string> OnItemRemovedFromInventory;
 
     private List<string> _itemsInInventory = new();
 
-    public void AddItemToInventory(string item)
+    public void AddItemToInventory(string item, Sprite sprite)
     {
         // debugging
         Debug.Log("item " + item + " added to inventory");
 
         _itemsInInventory.Add(item);
 
-        OnItemAddedToInventory?.Invoke(item);
+        OnItemAddedToInventory?.Invoke(item, sprite);
     }
 
     public void RemoveItemFromInventory(string item)

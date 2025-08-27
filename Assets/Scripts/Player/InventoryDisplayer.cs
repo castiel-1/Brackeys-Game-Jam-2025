@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryDisplayer : MonoBehaviour
 {
-    [SerializeField] private GameObject _itemHolder;
+    [SerializeField] private GameObject _itemContainer;
     [SerializeField] private GameObject _itemUIPrefab;
 
     private Dictionary<string, GameObject> _itemUIDict = new();
+    private Image _itemSprite;
 
     private void OnEnable()
     {
@@ -20,9 +22,15 @@ public class InventoryDisplayer : MonoBehaviour
         InventoryController.OnItemRemovedFromInventory -= DespawnItemInUI;
     }
 
-    public void SpawnItemInUI(string item)
+    private void Awake()
     {
-        GameObject itemUI = Instantiate(_itemUIPrefab, _itemHolder.transform);
+        _itemSprite = _itemUIPrefab.transform.GetChild(1).GetComponent<Image>();
+    }
+
+    public void SpawnItemInUI(string item, Sprite sprite)
+    {
+        GameObject itemUI = Instantiate(_itemUIPrefab, _itemContainer.transform);
+        _itemSprite.sprite = sprite;
 
         _itemUIDict.Add(item, itemUI);
     }
