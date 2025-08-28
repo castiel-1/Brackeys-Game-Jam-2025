@@ -38,7 +38,14 @@ public class VisionCone : MonoBehaviour
         // if we detect the player in range...
         if(objectsInRange.Length > 0)
         {
-            Transform target = objectsInRange[0].transform;
+            Transform target = null;
+            foreach(Collider2D c in objectsInRange)
+            {
+                if(c.name == "PlayerHeightIndicator")
+                {
+                    target = c.transform;
+                }
+            }
 
             // accounting for collider and sprite offset when using player position and converting to worldspace
             CapsuleCollider2D col = target.GetComponent<CapsuleCollider2D>();

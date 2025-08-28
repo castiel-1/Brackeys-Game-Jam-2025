@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 725d6280ffcd3444896187fbb8501371
+guid: 82804eaa0d4301247a2e0b0570204083
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5073479979375070852
-    second: Interact_Button_0
+      213: -6960308692747369424
+    second: Nudelholz_0
   - first:
-      213: 3682478407264193436
-    second: Interact_Button_1
+      213: -1272129865756378222
+    second: Nudelholz_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Interact_Button_0
+      name: Nudelholz_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 5
-        width: 12
+        y: 7
+        width: 14
         height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c71fa46d6d06799b0800000000000000
-      internalID: -5073479979375070852
+      spriteID: 034cab90f14086f90800000000000000
+      internalID: -6960308692747369424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interact_Button_1
+      name: Nudelholz_1
       rect:
         serializedVersion: 2
-        x: 22
-        y: 7
-        width: 12
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 99
+        y: 5
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9b470ec99aca1330800000000000000
-      internalID: 3682478407264193436
+      spriteID: 29bfc6b80ac785ee0800000000000000
+      internalID: -1272129865756378222
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: aed4519cac9d3494e9acd99f71113e39
+    spriteID: 527f731e27ed84a46bf485047bf555b3
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Interact_Button_0: -5073479979375070852
-      Interact_Button_1: 3682478407264193436
+      Nudelholz_0: -6960308692747369424
+      Nudelholz_1: -1272129865756378222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
