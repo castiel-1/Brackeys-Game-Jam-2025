@@ -10,7 +10,7 @@ public class Door : MonoBehaviour, IInteractable
     private void Awake()
     {
         _inventoryController = FindFirstObjectByType<InventoryController>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public string Interact()

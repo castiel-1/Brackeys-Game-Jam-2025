@@ -10,6 +10,7 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private float _alertValue = 30;
 
     private bool _isOn = true;
+    private Animator _animator;
     public bool IsOn
     {
         set
@@ -29,12 +30,14 @@ public class SecurityCamera : MonoBehaviour
         _visionCone.OnPlayerInVisionCone -= RaiseAlertMeter;
     }
 
-    private void Start()
+    private void Awake()
     {
         // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _viewAngle;
         _visionCone.ViewDistance = _viewDistance;
         _visionCone.ViewDirection = _viewDirection.normalized;
+
+        _animator = GetComponent<Animator>();
     }
 
     public void RaiseAlertMeter(float distanceToPlayer)
@@ -55,7 +58,9 @@ public class SecurityCamera : MonoBehaviour
     {
         // debugging
         Debug.Log("camera " + this.name + " isOn: " + _isOn);
+
         _visionCone.gameObject.SetActive(_isOn);
+        _animator.SetBool("cameraOn", _isOn);
     }
 
 }

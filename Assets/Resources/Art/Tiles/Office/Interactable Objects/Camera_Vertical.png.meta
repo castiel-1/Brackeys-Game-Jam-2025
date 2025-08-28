@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: a07fd370ecb48a648acb8b61db5dc00a
+guid: e7342664dc7e61e40bc03b7afd8ede05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8908387078811565313
-    second: Door_Vertical_0
+      213: 7422055218922225173
+    second: Camera_Vertical_0
   - first:
-      213: 1406759970369104097
-    second: Door_Vertical_1
+      213: -4149027563513005955
+    second: Camera_Vertical_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Door_Vertical_0
+      name: Camera_Vertical_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 28
-        width: 9
-        height: 75
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 2
+        y: 5
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10d3e3a79d2f0ab70800000000000000
-      internalID: 8908387078811565313
+      spriteID: 51e713bd5ef600760800000000000000
+      internalID: 7422055218922225173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Door_Vertical_1
+      name: Camera_Vertical_1
       rect:
         serializedVersion: 2
-        x: 344
-        y: 38
-        width: 23
-        height: 60
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 64
+        y: 5
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e8e61e5db0d58310800000000000000
-      internalID: 1406759970369104097
+      spriteID: d78b089d961bb66c0800000000000000
+      internalID: -4149027563513005955
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 914a2775ed889f84d956d9eee2e83f6a
+    spriteID: 2e162d20ae8c9a84a84f453eda3360fa
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Door_Vertical_0: 8908387078811565313
-      Door_Vertical_1: 1406759970369104097
+      Camera_Vertical_0: 7422055218922225173
+      Camera_Vertical_1: -4149027563513005955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
