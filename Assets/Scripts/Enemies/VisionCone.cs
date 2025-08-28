@@ -32,6 +32,8 @@ public class VisionCone : MonoBehaviour
     {
         // do circle raycast to see if player is in radius
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, ViewDistance, _playerLayer);
+
+        Debug.DrawRay(transform.position, ViewDirection * ViewDistance);
         
         // if we detect the player in range...
         if(objectsInRange.Length > 0)
@@ -102,7 +104,8 @@ public class VisionCone : MonoBehaviour
             // if no hit...
             if(hitInfo.collider == null)
             {
-                vertex = DirFromAngle(angle) * ViewDistance;
+                vertex = transform.InverseTransformPoint(transform.position + DirFromAngle(angle) * ViewDistance);
+
             }
             // if hit...
             else

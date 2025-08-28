@@ -1,15 +1,23 @@
 using System.Collections;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class SecurityCamera : MonoBehaviour
 {
     [SerializeField] private VisionCone _visionCone;
-    [SerializeField] private Vector2 _viewDirection;
+    [SerializeField] private Vector2 _viewDirection = Vector2.down;
     [SerializeField, Range(0, 360)] private float _viewAngle = 90;
     [SerializeField] private float _viewDistance = 5;
     [SerializeField] private float _alertValue = 30;
 
-    private bool _isDisabled = false;
+    private bool _isOn = true;
+    public bool IsOn
+    {
+        set
+        {
+            _isOn = value;
+            ApplyState();
+        }
+    }
 
     private void OnEnable()
     {
@@ -26,14 +34,7 @@ public class Camera : MonoBehaviour
         // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _viewAngle;
         _visionCone.ViewDistance = _viewDistance;
-    }
-
-    private void Update()
-    {
-        if (_isDisabled)
-        {
-            return;
-        }
+        _visionCone.ViewDirection = _viewDirection.normalized;
     }
 
     public void RaiseAlertMeter(float distanceToPlayer)
@@ -41,19 +42,20 @@ public class Camera : MonoBehaviour
         AlertMeterEvent.OnAlertMeterRaised?.Invoke(_alertValue * Time.deltaTime); // because detection runs in update we need to scale the raise here
     }
 
-    public void DisableVisionCone(float seconds)
+    public void Toggle()
     {
         // debugging
-        Debug.Log("disabled camera vision cone for: " + seconds + " seconds");
+        Debug.Log("camera toggled.");
 
-        StartCoroutine(DisableVisionConeRoutine(seconds));
+        _isOn = !_isOn;
+        ApplyState();
     }
 
-    IEnumerator DisableVisionConeRoutine(float seconds)
+    private void ApplyState()
     {
-        _visionCone.enabled = false;
-        yield return new WaitForSeconds(seconds);
-        _visionCone.enabled = true;
+        // debugging
+        Debug.Log("camera " + this.name + " isOn: " + _isOn);
+        _visionCone.gameObject.SetActive(_isOn);
     }
 
 }

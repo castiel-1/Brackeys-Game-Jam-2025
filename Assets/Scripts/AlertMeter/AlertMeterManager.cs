@@ -25,7 +25,7 @@ public class AlertMeterManager : MonoBehaviour
     {
         if(_slider.value + amount >= _alertMeterMax)
         {
-            // TODO restart level, fail screen
+            GameManager.Instance.GameOverScreen();
         }
 
         _slider.value += amount;
