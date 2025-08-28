@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private SpriteRenderer _sr;
 
     private bool _isKnockedOut = false;
+    private Animator _animator;
 
     private void OnEnable()
     {
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
         _waypointMover.OnMovingToWaypoint -= UpdateViewDirection;
     }
 
-    private void Start()
+    private void Awake()
     {
         // set move speed in mover
         _waypointMover.moveSpeed = _enemySO.moveSpeed;
@@ -39,7 +40,8 @@ public class Enemy : MonoBehaviour
         {
             _sr.flipX = true;
         }
-        
+
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -72,14 +74,21 @@ public class Enemy : MonoBehaviour
         _isKnockedOut = true;
         if(_waypointMover) _waypointMover.enabled = false;
         _visionCone.gameObject.SetActive(false);
+        _animator.SetBool("isKnockedOut", _isKnockedOut);
 
         float timer = _enemySO.knockoutDuration;
 
-        yield return new WaitForSeconds(timer);
+        yield return new WaitForSeconds(timer + 0.5f);
+
+
+        _isKnockedOut = false;
+        _animator.SetBool("isKnockedOut", _isKnockedOut);
+
+        yield return new WaitForSeconds(0.5f);
 
         _visionCone.gameObject.SetActive(true);
-        if(_waypointMover) _waypointMover.enabled = true;
-        _isKnockedOut = false;
+        if (_waypointMover) _waypointMover.enabled = true;
+
     }
 
     public void RaiseAlertMeter(float distanceToPlayer)

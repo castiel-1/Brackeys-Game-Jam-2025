@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 1beae08ea3e8556498bb6a1fc5c2d067
+guid: 226945374bcd0434bb3ab40a69cfe6a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9033162075642301625
-    second: Guard Walk_0
+      213: 8131346238062449492
+    second: Guard Knockout_0
   - first:
-      213: 3618169764047167644
-    second: Guard Walk_1
+      213: -2169847710257696653
+    second: Guard Knockout_1
   - first:
-      213: -6171041783823814159
-    second: Guard Walk_2
+      213: -5935820618496134448
+    second: Guard Knockout_2
   - first:
-      213: 506786935788560159
-    second: Guard Walk_3
+      213: -1890734788785798873
+    second: Guard Knockout_3
   - first:
-      213: -4311049377616825397
-    second: Guard Walk_4
-  - first:
-      213: -6160000399787636989
-    second: Guard Walk_5
-  - first:
-      213: 4642695899615872087
-    second: Guard Walk_6
+      213: 2927607050306535057
+    second: Guard Knockout_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,56 +112,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Guard Walk_0
+      name: Guard Knockout_0
       rect:
         serializedVersion: 2
-        x: 44
+        x: 43
         y: 18
-        width: 17
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7437fc2b3f2c3a280800000000000000
-      internalID: -9033162075642301625
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_1
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 18
-        width: 20
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9027130b32563230800000000000000
-      internalID: 3618169764047167644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_2
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 18
-        width: 26
+        width: 15
         height: 51
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -177,42 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f1b615713e0c5aa0800000000000000
-      internalID: -6171041783823814159
+      spriteID: 453db61625858d070800000000000000
+      internalID: 8131346238062449492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guard Walk_3
+      name: Guard Knockout_1
       rect:
         serializedVersion: 2
-        x: 293
-        y: 18
-        width: 14
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1f5c747808780700800000000000000
-      internalID: 506786935788560159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_4
-      rect:
-        serializedVersion: 2
-        x: 373
+        x: 126
         y: 18
         width: 21
-        height: 53
+        height: 50
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,19 +149,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc3faf59e631c24c0800000000000000
-      internalID: -4311049377616825397
+      spriteID: 370356df00723e1e0800000000000000
+      internalID: -2169847710257696653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Guard Walk_5
+      name: Guard Knockout_2
       rect:
         serializedVersion: 2
-        x: 455
+        x: 190
+        y: 16
+        width: 51
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d23918c89abf9da0800000000000000
+      internalID: -5935820618496134448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Knockout_3
+      rect:
+        serializedVersion: 2
+        x: 288
         y: 18
-        width: 25
+        width: 17
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72103f52ab2c2c5e0800000000000000
+      internalID: -1890734788785798873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guard Knockout_4
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 18
+        width: 15
         height: 51
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -243,30 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 307c4620648438aa0800000000000000
-      internalID: -6160000399787636989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_6
-      rect:
-        serializedVersion: 2
-        x: 542
-        y: 18
-        width: 17
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75444c8925b2e6040800000000000000
-      internalID: 4642695899615872087
+      spriteID: 19e3373e913f0a820800000000000000
+      internalID: 2927607050306535057
       vertices: []
       indices: 
       edges: []
@@ -275,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5bf0a374b175f66449da76cf2a38ba49
+    spriteID: 7b9d6e46fb7bc004ba2262bf2e5d29e2
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Guard Walk_0: -9033162075642301625
-      Guard Walk_1: 3618169764047167644
-      Guard Walk_2: -6171041783823814159
-      Guard Walk_3: 506786935788560159
-      Guard Walk_4: -4311049377616825397
-      Guard Walk_5: -6160000399787636989
-      Guard Walk_6: 4642695899615872087
+      Guard Knockout_0: 8131346238062449492
+      Guard Knockout_1: -2169847710257696653
+      Guard Knockout_2: -5935820618496134448
+      Guard Knockout_3: -1890734788785798873
+      Guard Knockout_4: 2927607050306535057
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
