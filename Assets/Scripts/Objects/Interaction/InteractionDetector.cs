@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractionDetector : MonoBehaviour
 {
     [SerializeField] private GameObject _interactionPrompt;
-    [SerializeField] private TextMeshPro _interactMessage;
+    [SerializeField] private GameObject _interactMessage;
     [SerializeField] private float _displayTime = 2f;
 
     private IInteractable _interactableInRange = null;
@@ -26,11 +26,13 @@ public class InteractionDetector : MonoBehaviour
 
     IEnumerator DisplayInteractMessageRoutine(string message)
     {
-        _interactMessage.text = message;
+        _interactMessage.SetActive(true);
+        _interactMessage.GetComponentInChildren<TextMeshPro>().text = message;
 
         yield return new WaitForSeconds(_displayTime);
 
-        _interactMessage.text = "";
+        _interactMessage.GetComponentInChildren<TextMeshPro>().text = "";
+        _interactMessage.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
