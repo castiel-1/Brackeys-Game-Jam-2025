@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Expanding Dough_0: -1544263421559956090
+      Expanding Dough_1: 7704437882951953874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
