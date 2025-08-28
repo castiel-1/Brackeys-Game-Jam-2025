@@ -11,7 +11,7 @@ public class Item : MonoBehaviour, IInteractable
     private void Awake()
     {
         _inventoryController = FindFirstObjectByType<InventoryController>();
-        _sprite = GetComponent<Sprite>();
+        _sprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     public bool CanInteract()
@@ -21,6 +21,9 @@ public class Item : MonoBehaviour, IInteractable
 
     public string Interact()
     {
+        // debugging
+        Debug.Log("sprite picked up: " + _sprite.name);
+
         _inventoryController.AddItemToInventory(_itemID, _sprite);
         gameObject.SetActive(false);
 
