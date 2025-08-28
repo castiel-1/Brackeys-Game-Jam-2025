@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2a004b1fee3cb014a94826a531906ca7
+guid: ffdc5b9fa08a84772b826684b868982d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4501645529269786557
-    second: Alert meter_innards_0
+      213: -1544263421559956090
+    second: Expanding Dough_0
+  - first:
+      213: 7704437882951953874
+    second: Expanding Dough_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alert meter_innards_0
+      name: Expanding Dough_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 4
-        width: 18
-        height: 10
+        y: 6
+        width: 13
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db7d9d412ce097e30800000000000000
-      internalID: 4501645529269786557
+      spriteID: 68d1a46999ca19ae0800000000000000
+      internalID: -1544263421559956090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Expanding Dough_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 4
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dde9674f69abea60800000000000000
+      internalID: 7704437882951953874
       vertices: []
       indices: 
       edges: []
@@ -134,8 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Alert meter_innards_0: 4501645529269786557
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
