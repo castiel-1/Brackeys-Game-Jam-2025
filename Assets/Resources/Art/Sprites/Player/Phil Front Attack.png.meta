@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 58c3029bfb10a3344b4dd2766f6b6995
+guid: f898753f580ff56419547e49beee9014
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7698362336088174530
-    second: Tiny Phil_Nudelholz_0
+      213: -2191342604794172906
+    second: Phil Front Attack_0
   - first:
-      213: -5609618855304535467
-    second: Tiny Phil_Nudelholz_1
+      213: -2804172767699290093
+    second: Phil Front Attack_1
   - first:
-      213: -3778355332517869410
-    second: Tiny Phil_Nudelholz_2
+      213: 2985959544616642937
+    second: Phil Front Attack_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,12 +106,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tiny Phil_Nudelholz_0
+      name: Phil Front Attack_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 6
         y: 5
-        width: 10
+        width: 14
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,41 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cf28cac1c316da60800000000000000
-      internalID: 7698362336088174530
+      spriteID: 61a601cd289c691e0800000000000000
+      internalID: -2191342604794172906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tiny Phil_Nudelholz_1
+      name: Phil Front Attack_1
       rect:
         serializedVersion: 2
         x: 107
         y: 5
         width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5526d344f51a622b0800000000000000
-      internalID: -5609618855304535467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tiny Phil_Nudelholz_2
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 5
-        width: 10
         height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e98c11af7d5909bc0800000000000000
-      internalID: -3778355332517869410
+      spriteID: 318b57499b39519d0800000000000000
+      internalID: -2804172767699290093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phil Front Attack_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 5
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979ef82b262407920800000000000000
+      internalID: 2985959544616642937
       vertices: []
       indices: 
       edges: []
