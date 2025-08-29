@@ -50,6 +50,12 @@ public class VisionCone : MonoBehaviour
                 }
             }
 
+            if(target == null)
+            {
+                Debug.Log("target is NULL");
+                return;
+            }
+
             // accounting for collider and sprite offset when using player position and converting to worldspace
             CapsuleCollider2D col = target.GetComponent<CapsuleCollider2D>();
             Vector2 colliderCenter = (Vector2)target.TransformPoint(col.offset);
