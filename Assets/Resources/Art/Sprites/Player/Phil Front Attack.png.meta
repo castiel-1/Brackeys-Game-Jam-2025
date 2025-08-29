@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 1771d330290199c49845b937320a41dd
+guid: f898753f580ff56419547e49beee9014
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1622982495138199425
-    second: Phil Front Idle_Nudelholz_0
+      213: -2191342604794172906
+    second: Phil Front Attack_0
   - first:
-      213: 5703223896124322158
-    second: Phil Front Idle_Nudelholz_1
+      213: -2804172767699290093
+    second: Phil Front Attack_1
+  - first:
+      213: 2985959544616642937
+    second: Phil Front Attack_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -77,8 +80,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
-    textureCompression: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,45 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Phil Front Idle_Nudelholz_0
+      name: Phil Front Attack_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 17
+        x: 6
+        y: 5
         width: 14
-        height: 44
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f784c9405020a79e0800000000000000
-      internalID: -1622982495138199425
+      spriteID: 61a601cd289c691e0800000000000000
+      internalID: -2191342604794172906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Phil Front Idle_Nudelholz_1
+      name: Phil Front Attack_1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 17
-        width: 14
-        height: 43
-      alignment: 8
-      pivot: {x: 1, y: 0}
+        x: 107
+        y: 5
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e617203aaebe52f40800000000000000
-      internalID: 5703223896124322158
+      spriteID: 318b57499b39519d0800000000000000
+      internalID: -2804172767699290093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Phil Front Attack_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 5
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979ef82b262407920800000000000000
+      internalID: 2985959544616642937
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 958bceb178b2fd249a90022aa38ca0f2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Phil Front Idle_Nudelholz_0: -1622982495138199425
-      Phil Front Idle_Nudelholz_1: 5703223896124322158
+      Tiny Phil_Nudelholz_0: 7698362336088174530
+      Tiny Phil_Nudelholz_1: -5609618855304535467
+      Tiny Phil_Nudelholz_2: -3778355332517869410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
