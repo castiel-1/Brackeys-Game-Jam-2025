@@ -4,7 +4,8 @@ using UnityEngine;
 public class SecurityCamera : MonoBehaviour
 {
     [SerializeField] private VisionCone _visionCone;
-    [SerializeField] private Vector2 _viewDirection = Vector2.up;
+    [SerializeField] private Vector2 _viewDirection;
+    [SerializeField] private bool _lookInDirectionOfRotation = true;
     [SerializeField, Range(0, 360)] private float _viewAngle = 90;
     [SerializeField] private float _viewDistance = 5;
     [SerializeField] private float _alertValue = 30;
@@ -33,6 +34,11 @@ public class SecurityCamera : MonoBehaviour
 
     private void Awake()
     {
+        if (_lookInDirectionOfRotation)
+        {
+            _viewDirection = -transform.up;
+        }
+
         // set viewAngle and viewRadius for vision cone
         _visionCone.ViewAngle = _viewAngle;
         _visionCone.ViewDistance = _viewDistance;

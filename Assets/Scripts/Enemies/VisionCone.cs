@@ -152,6 +152,8 @@ public class VisionCone : MonoBehaviour
         // give vertices and triangles to mesh
         _mesh.vertices = vertices;
         _mesh.triangles = triangles;
+
+        _mesh.RecalculateBounds();
     }
 
     private Vector3 DirFromAngle(float angleInDegrees)
