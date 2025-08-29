@@ -289,9 +289,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneBasics
       objectReference: {fileID: 0}
+    - target: {fileID: 1488460748924158601, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21019995
+      objectReference: {fileID: 0}
     - target: {fileID: 1828728606265164541, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5031463226915458978, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -332,6 +336,30 @@ PrefabInstance:
     - target: {fileID: 5031463226915458978, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371466412276329054, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21019995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985857329902095657, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985857329902095657, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[4]'
+      value: 1864248867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985857329902095657, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[5]'
+      value: 881212713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985857329902095657, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[6]'
+      value: 585568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985857329902095657, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: 'm_ApplyToSortingLayers.Array.data[7]'
+      value: 902717525
       objectReference: {fileID: 0}
     - target: {fileID: 8000289362159136892, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_AnchorMax.y
