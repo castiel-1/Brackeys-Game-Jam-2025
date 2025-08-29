@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IInteractable
 {
     [SerializeField] private EnemySO _enemySO;
     [SerializeField] private WaypointMover _waypointMover;
@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     private bool _isKnockedOut = false;
     private Animator _animator;
+    private InventoryController _inventoryController;
 
     private void OnEnable()
     {
@@ -42,6 +43,7 @@ public class Enemy : MonoBehaviour
         }
 
         _animator = GetComponent<Animator>();
+        _inventoryController = GameObject.FindFirstObjectByType<InventoryController>();
     }
 
     private void Update()
@@ -55,7 +57,12 @@ public class Enemy : MonoBehaviour
         Debug.DrawRay(transform.position, _viewDirection, Color.red);
     }
 
-    public void KnockOutEnemy()
+    public bool CanInteract()
+    {
+        return !_isKnockedOut && _inventoryController.HasItem("nudelholz");
+    }
+
+    public string Interact()
     {
         // debugging
         Debug.Log("enemy knocked out");
@@ -63,10 +70,13 @@ public class Enemy : MonoBehaviour
         if (!_isKnockedOut)
         {
             StartCoroutine(KnockOutRoutine());
+            return "Guard knocked out!";
         }
 
         // debugging
         Debug.Log("enemy up again");
+
+        return "";
     }
 
     IEnumerator KnockOutRoutine()
@@ -93,6 +103,9 @@ public class Enemy : MonoBehaviour
 
     public void RaiseAlertMeter(float distanceToPlayer)
     {
+        // debugging
+        Debug.Log("raising alert meter");
+
         float clampedDistance = Mathf.Clamp(distanceToPlayer, 0, _enemySO.viewDistance);
 
         // if we are closer to player the value is closer to 0

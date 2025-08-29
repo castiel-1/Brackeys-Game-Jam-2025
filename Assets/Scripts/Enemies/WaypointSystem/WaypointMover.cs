@@ -13,7 +13,7 @@ public class WaypointMover : MonoBehaviour
 
     private Vector2 _viewDirection = Vector2.zero;
     private Waypoint[] _waypoints;
-    private int _currentIndex;
+    private int _currentIndex = 0;
     private bool _isWaiting;
     private bool _movingForward = true;
     private Animator _animator;
@@ -27,6 +27,11 @@ public class WaypointMover : MonoBehaviour
 
         _animator = GetComponent<Animator>();
 
+        _viewDirection = (_waypoints[_currentIndex].transform.position - transform.position).normalized;
+        OnMovingToWaypoint?.Invoke(_viewDirection);
+
+        // debugging
+        Debug.Log("view direction = " + _viewDirection);
     }
 
     // TODO add if game paused: return

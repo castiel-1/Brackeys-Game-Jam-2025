@@ -12,7 +12,7 @@ public class VisionCone : MonoBehaviour
 
     [HideInInspector] public float ViewAngle; // gets set by enemy in start
     [HideInInspector] public float ViewDistance; // gets set by enemy in start
-    [HideInInspector] public Vector2 ViewDirection; // gets set by enemy when changed
+    [HideInInspector] public Vector2 ViewDirection; // gets set by mover when move direction changes
 
     private Mesh _mesh;
 
@@ -32,8 +32,6 @@ public class VisionCone : MonoBehaviour
     {
         // do circle raycast to see if player is in radius
         Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, ViewDistance, _playerLayer);
-
-        Debug.DrawRay(transform.position, ViewDirection * ViewDistance);
         
         // if we detect the player in range...
         if(objectsInRange.Length > 0)
@@ -56,9 +54,13 @@ public class VisionCone : MonoBehaviour
 
             // debugging
             Debug.DrawRay(transform.position, dirToPlayer, Color.white);
+            Debug.DrawRay(transform.position, ViewDirection * ViewDistance, Color.cyan);
 
             // convert to angle
             float angleToPlayer = Vector2.Angle(ViewDirection, dirToPlayer);
+
+            // debugging
+            Debug.Log("angle to player: " + angleToPlayer);
 
             // if player position is in fov
             if(angleToPlayer < (ViewAngle / 2f))
@@ -72,7 +74,6 @@ public class VisionCone : MonoBehaviour
                 Vector2 dirToFeet = dirToPlayer - new Vector2(0, colliderHeight/2f);
 
                 // debugging
-                Debug.DrawRay(transform.position, dirToPlayer, Color.blue);
                 Debug.DrawRay(transform.position, dirToHead, Color.yellow);
                 Debug.DrawRay(transform.position, dirToFeet, Color.green);
 

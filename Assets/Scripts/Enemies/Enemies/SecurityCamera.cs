@@ -9,7 +9,8 @@ public class SecurityCamera : MonoBehaviour
     [SerializeField] private float _viewDistance = 5;
     [SerializeField] private float _alertValue = 30;
 
-    private bool _isOn = true;
+    private bool _isOn;
+    private bool _hasPower = true;
     private Animator _animator;
     public bool IsOn
     {
@@ -47,10 +48,21 @@ public class SecurityCamera : MonoBehaviour
 
     public void Toggle()
     {
+        if (!_hasPower)
+        {
+            return;
+        }
+
         // debugging
         Debug.Log("camera toggled.");
 
         _isOn = !_isOn;
+        ApplyState();
+    }
+
+    public void SetPower(bool hasPower)
+    {
+        _hasPower = hasPower;
         ApplyState();
     }
 
@@ -59,8 +71,10 @@ public class SecurityCamera : MonoBehaviour
         // debugging
         Debug.Log("camera " + this.name + " isOn: " + _isOn);
 
-        _visionCone.gameObject.SetActive(_isOn);
-        _animator.SetBool("cameraOn", _isOn);
+        bool active = _isOn && _hasPower;
+
+        _visionCone.gameObject.SetActive(active);
+        _animator.SetBool("cameraOn", active);
     }
 
 }

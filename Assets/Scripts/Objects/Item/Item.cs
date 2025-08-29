@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string _itemID;
+    [SerializeField] private string _itemName;
 
     private bool _isPickedUp = false;
     private InventoryController _inventoryController;
@@ -24,9 +24,9 @@ public class Item : MonoBehaviour, IInteractable
         // debugging
         Debug.Log("sprite picked up: " + _sprite.name);
 
-        _inventoryController.AddItemToInventory(_itemID, _sprite);
+        _inventoryController.AddItemToInventory(_itemName, _sprite);
         gameObject.SetActive(false);
 
-        return "Picked up " + _itemID + "!";
+        return "Picked up " + _itemName + "!";
     }
 }

@@ -18,9 +18,12 @@ public class InteractionDetector : MonoBehaviour
             Debug.Log("E was pressed");
 
             string displayMessage = _interactableInRange?.Interact();
-            StartCoroutine(DisplayInteractMessageRoutine(displayMessage));
 
-            _interactionPrompt.SetActive(false);
+            if(displayMessage != "")
+            {
+                StartCoroutine(DisplayInteractMessageRoutine(displayMessage));
+                _interactionPrompt.SetActive(false);
+            }
         }
     }
 
