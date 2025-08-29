@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Guard
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  moveSpeed: 2
-  viewAngle: 90
+  moveSpeed: 4
+  viewAngle: 120
   viewDistance: 10
   knockoutDuration: 5
-  minimumAlertRaiseSpeed: 5
-  maximumAlertRaiseSpeed: 25
+  minimumAlertRaiseSpeed: 30
+  maximumAlertRaiseSpeed: 60
