@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Thicc Walls_11
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -871988334, guid: 7bb72b0acff60794bb4cff8fe8f5ca73, type: 3}
+  m_Sprite: {fileID: 899234642, guid: 3cffda73ff605f244b9b4cfde0436c88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
