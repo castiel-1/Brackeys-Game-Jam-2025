@@ -5,9 +5,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private GameObject _gameOverScreen;
     private int _currentLevel = 0;
     private int _storyIndex = 0;
+    private bool _isPaused = false;
 
     private void Awake()
     {
@@ -22,6 +22,24 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
+    }
+
+    public void PauseGame()
+    {
+        // debugging
+        Debug.Log("paused game");
+
+        Time.timeScale = 0f;  
+        _isPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        // debugging
+        Debug.Log("resumed game");
+
+        Time.timeScale = 1f; 
+        _isPaused = false;
     }
 
     public void LoadNextLevel()

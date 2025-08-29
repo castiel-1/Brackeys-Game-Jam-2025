@@ -52,6 +52,9 @@ TagManager:
   - name: Collision
     uniqueID: 1310522055
     locked: 0
+  - name: Collision - in front of other col
+    uniqueID: 1864248867
+    locked: 0
   - name: Player
     uniqueID: 881212713
     locked: 0

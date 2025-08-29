@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "enemy", menuName = "ScriptableObjects/Enemy")]
+[CreateAssetMenu(fileName = "NewEnemy", menuName = "ScriptableObjects/Enemy")]
 public class EnemySO : ScriptableObject
 {
     public Sprite sprite;
