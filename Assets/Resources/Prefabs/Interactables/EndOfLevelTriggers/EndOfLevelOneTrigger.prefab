@@ -101,6 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedfa8e4354392047baf6d4b68a51b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pickupClip: {fileID: 8300000, guid: ed184a622c40e364ea9f9256867550e9, type: 3}
+  _volume: 0.1
 --- !u!58 &8903991529816754212
 CircleCollider2D:
   m_ObjectHideFlags: 0

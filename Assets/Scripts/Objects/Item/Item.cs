@@ -3,6 +3,8 @@ using UnityEngine;
 public class Item : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _itemName;
+    [SerializeField] private AudioClip _pickupSound;
+    [SerializeField] private float _volume = 0.1f;
 
     private bool _isPickedUp = false;
     private InventoryController _inventoryController;
@@ -23,6 +25,8 @@ public class Item : MonoBehaviour, IInteractable
     {
         // debugging
         Debug.Log("sprite picked up: " + _sprite.name);
+
+        SoundFXManager.Instance.PlaySoundFXClip(_pickupSound, transform, _volume);
 
         _inventoryController.AddItemToInventory(_itemName, _sprite);
         gameObject.SetActive(false);

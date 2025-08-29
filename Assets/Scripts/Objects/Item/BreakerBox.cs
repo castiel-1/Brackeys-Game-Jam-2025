@@ -5,6 +5,8 @@ using UnityEngine;
 public class BreakerBox : MonoBehaviour, IInteractable
 {
     [SerializeField] List<SecurityCamera> cameras;
+    [SerializeField] private AudioClip _switchSound;
+    [SerializeField] private float _volume = 0.2f;
 
     private bool _powerOn = true;
     private Animator _animator;
@@ -21,6 +23,8 @@ public class BreakerBox : MonoBehaviour, IInteractable
 
     public string Interact()
     {
+        SoundFXManager.Instance.PlaySoundFXClip(_switchSound, transform, _volume);
+
         _powerOn = !_powerOn;
         _animator.SetBool("isOn", _powerOn);
 
