@@ -15,11 +15,16 @@ public class VisionCone : MonoBehaviour
     [HideInInspector] public Vector2 ViewDirection; // gets set by mover when move direction changes
 
     private Mesh _mesh;
+    private MeshRenderer _meshRenderer;
 
     private void Awake()
     {
         _mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = _mesh;
+        _meshRenderer = GetComponent<MeshRenderer>();
+
+        _meshRenderer.sortingLayerName = "Player";
+        _meshRenderer.sortingOrder = 2;
     }
 
     private void Update()
