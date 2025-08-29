@@ -147,8 +147,8 @@ TextureImporter:
       name: Thicc Walls_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -169,8 +169,8 @@ TextureImporter:
       name: Thicc Walls_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 48
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -192,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -214,7 +214,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -235,8 +235,8 @@ TextureImporter:
       name: Thicc Walls_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 32
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -257,8 +257,8 @@ TextureImporter:
       name: Thicc Walls_7
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -271,6 +271,182 @@ TextureImporter:
       bones: []
       spriteID: 9663fd613c91d184fa257ed4fb821389
       internalID: 1453001666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d46f198ffecdaa48a7a20a894e2a08b
+      internalID: 102128431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc3485d9f403ec428aab8ad0a4019be
+      internalID: -1091800678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6bc59f8a6be12489ef85ee78d6a297
+      internalID: -1880795987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac766c53819b45499da8998b15d370e
+      internalID: -871988334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47339eb6d788ed4ea88b3e0292ad982
+      internalID: -1717304597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c6d586f8703b04e885d5c5be3614af
+      internalID: 109622985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47565c2f32c10044c9d4faf77048e192
+      internalID: 117138396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thicc Walls_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bb0f11fd743644e8023b76bcec0413
+      internalID: 1265607683
       vertices: []
       indices: 
       edges: []
@@ -291,12 +467,20 @@ TextureImporter:
     nameFileIdTable:
       Thicc Walls_0: -7328382129491723510
       Thicc Walls_1: 418093221
+      Thicc Walls_10: -1880795987
+      Thicc Walls_11: -871988334
+      Thicc Walls_12: -1717304597
+      Thicc Walls_13: 109622985
+      Thicc Walls_14: 117138396
+      Thicc Walls_15: 1265607683
       Thicc Walls_2: -1333181829
       Thicc Walls_3: 154118404
       Thicc Walls_4: 247720146
       Thicc Walls_5: -764977029
       Thicc Walls_6: 1523666310
       Thicc Walls_7: 1453001666
+      Thicc Walls_8: 102128431
+      Thicc Walls_9: -1091800678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
