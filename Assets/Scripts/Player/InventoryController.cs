@@ -32,12 +32,10 @@ public class InventoryController : MonoBehaviour
 
     public bool HasItem(string item)
     {
-        return _itemsInInventory.Contains(item);
-    }
+        // debugging
+        Debug.Log("item in inventory? " + _itemsInInventory.Contains(item));
 
-    public void GetItem(GameObject item)
-    {
-        
+        return _itemsInInventory.Contains(item);
     }
 
 }
