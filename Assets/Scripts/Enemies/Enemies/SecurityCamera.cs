@@ -4,7 +4,7 @@ using UnityEngine;
 public class SecurityCamera : MonoBehaviour
 {
     [SerializeField] private VisionCone _visionCone;
-    [SerializeField] private Vector2 _viewDirection = Vector2.down;
+    [SerializeField] private Vector2 _viewDirection = Vector2.up;
     [SerializeField, Range(0, 360)] private float _viewAngle = 90;
     [SerializeField] private float _viewDistance = 5;
     [SerializeField] private float _alertValue = 30;
