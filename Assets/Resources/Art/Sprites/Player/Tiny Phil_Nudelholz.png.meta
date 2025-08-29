@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tiny Phil_Nudelholz_0: 7698362336088174530
+      Tiny Phil_Nudelholz_1: -5609618855304535467
+      Tiny Phil_Nudelholz_2: -3778355332517869410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

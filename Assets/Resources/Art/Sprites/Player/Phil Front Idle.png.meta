@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Phil Front Idle_0: 8022817914830692023
+      Phil Front Idle_1: 3008506163995505577
+      Phil Front Idle_2: 2717555836695926752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
