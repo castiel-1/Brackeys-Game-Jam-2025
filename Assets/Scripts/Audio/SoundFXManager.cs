@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class SoundFXManager : MonoBehaviour
 {
-    public static AudioManager Instance;
+    public static SoundFXManager Instance;
 
     [SerializeField] private AudioSource _soundFXPrefab;
 
@@ -34,13 +34,13 @@ public class AudioManager : MonoBehaviour
         Destroy(audioSource.gameObject, clipLength);
     }
 
-    public void PlayRandomSoundFXClip(AudioSource[] clips, Transform spawnTransform, float volume)
+    public void PlayRandomSoundFXClip(AudioClip[] clips, Transform spawnTransform, float volume)
     {
         int rand = Random.Range(0, clips.Length);
 
-        AudioSource audioSource = clips[rand];
+        AudioSource audioSource = Instantiate(_soundFXPrefab, spawnTransform.position, Quaternion.identity);
 
-        audioSource.clip = audioSource.clip;
+        audioSource.clip = clips[rand];
         audioSource.volume = volume;
         audioSource.Play();
 

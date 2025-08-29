@@ -11,18 +11,6 @@ TextureImporter:
   - first:
       213: -6171041783823814159
     second: Guard Walk_2
-  - first:
-      213: 506786935788560159
-    second: Guard Walk_3
-  - first:
-      213: -4311049377616825397
-    second: Guard Walk_4
-  - first:
-      213: -6160000399787636989
-    second: Guard Walk_5
-  - first:
-      213: 4642695899615872087
-    second: Guard Walk_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,10 +109,10 @@ TextureImporter:
       name: Guard Walk_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 18
-        width: 17
-        height: 52
+        x: 10
+        y: 6
+        width: 9
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +131,10 @@ TextureImporter:
       name: Guard Walk_1
       rect:
         serializedVersion: 2
-        x: 123
-        y: 18
-        width: 20
-        height: 53
+        x: 108
+        y: 6
+        width: 9
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +153,10 @@ TextureImporter:
       name: Guard Walk_2
       rect:
         serializedVersion: 2
-        x: 205
-        y: 18
-        width: 26
-        height: 51
+        x: 206
+        y: 6
+        width: 9
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,99 +171,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Guard Walk_3
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 18
-        width: 14
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1f5c747808780700800000000000000
-      internalID: 506786935788560159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_4
-      rect:
-        serializedVersion: 2
-        x: 373
-        y: 18
-        width: 21
-        height: 53
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc3faf59e631c24c0800000000000000
-      internalID: -4311049377616825397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_5
-      rect:
-        serializedVersion: 2
-        x: 455
-        y: 18
-        width: 25
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 307c4620648438aa0800000000000000
-      internalID: -6160000399787636989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Guard Walk_6
-      rect:
-        serializedVersion: 2
-        x: 542
-        y: 18
-        width: 17
-        height: 52
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 75444c8925b2e6040800000000000000
-      internalID: 4642695899615872087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5bf0a374b175f66449da76cf2a38ba49
+    spriteID: 856f7c4812bbd65469d2f897f1131221
     internalID: 0
     vertices: []
     indices: 
@@ -288,10 +188,6 @@ TextureImporter:
       Guard Walk_0: -9033162075642301625
       Guard Walk_1: 3618169764047167644
       Guard Walk_2: -6171041783823814159
-      Guard Walk_3: 506786935788560159
-      Guard Walk_4: -4311049377616825397
-      Guard Walk_5: -6160000399787636989
-      Guard Walk_6: 4642695899615872087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

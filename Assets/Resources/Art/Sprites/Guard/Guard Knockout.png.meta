@@ -11,12 +11,6 @@ TextureImporter:
   - first:
       213: -5935820618496134448
     second: Guard Knockout_2
-  - first:
-      213: -1890734788785798873
-    second: Guard Knockout_3
-  - first:
-      213: 2927607050306535057
-    second: Guard Knockout_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,10 +109,10 @@ TextureImporter:
       name: Guard Knockout_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 18
-        width: 15
-        height: 51
+        x: 11
+        y: 6
+        width: 6
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +131,10 @@ TextureImporter:
       name: Guard Knockout_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 18
-        width: 21
-        height: 50
+        x: 109
+        y: 6
+        width: 9
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +153,10 @@ TextureImporter:
       name: Guard Knockout_2
       rect:
         serializedVersion: 2
-        x: 190
-        y: 16
-        width: 51
-        height: 13
+        x: 202
+        y: 6
+        width: 16
+        height: 6
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +175,20 @@ TextureImporter:
       name: Guard Knockout_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 18
-        width: 17
-        height: 42
+        x: 304
+        y: 6
+        width: 9
+        height: 13
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 72103f52ab2c2c5e0800000000000000
-      internalID: -1890734788785798873
+      spriteID: 7aaac0e7a930146448cbe7427b5b5aed
+      internalID: 2088536034
       vertices: []
       indices: 
       edges: []
@@ -203,20 +197,20 @@ TextureImporter:
       name: Guard Knockout_4
       rect:
         serializedVersion: 2
-        x: 375
-        y: 18
-        width: 15
-        height: 51
+        x: 403
+        y: 6
+        width: 6
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 19e3373e913f0a820800000000000000
-      internalID: 2927607050306535057
+      spriteID: 32460be21720ff2489424d1bc2df6c10
+      internalID: 661909698
       vertices: []
       indices: 
       edges: []
@@ -225,7 +219,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7b9d6e46fb7bc004ba2262bf2e5d29e2
+    spriteID: b709446ee50ff2045b6f1ef93eec6310
     internalID: 0
     vertices: []
     indices: 
@@ -238,8 +232,8 @@ TextureImporter:
       Guard Knockout_0: 8131346238062449492
       Guard Knockout_1: -2169847710257696653
       Guard Knockout_2: -5935820618496134448
-      Guard Knockout_3: -1890734788785798873
-      Guard Knockout_4: 2927607050306535057
+      Guard Knockout_3: 2088536034
+      Guard Knockout_4: 661909698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

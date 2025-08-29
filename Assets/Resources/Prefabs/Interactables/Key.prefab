@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemName: key
+  _pickupSound: {fileID: 8300000, guid: d854fb0741270a44c974d403496aafa2, type: 3}
+  _volume: 0.12
 --- !u!58 &1063693195900232592
 CircleCollider2D:
   m_ObjectHideFlags: 0

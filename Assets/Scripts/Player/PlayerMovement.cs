@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -5,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed = 1.0f;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private SpriteRenderer _sr;
+    [SerializeField] private List<AudioClip> footstepAudio;
+    [SerializeField] private float _footstepCooldown = 0.2f;
 
     private Animator _animator;
 
@@ -12,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float _vertical;
 
     private bool _facingLeft = false;
+    private float _lastFootstepTime = 0;
 
     private void Start()
     {
@@ -30,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         if (_horizontal != 0)
         {
             _animator.SetFloat("moveMagnitude", Mathf.Abs(_horizontal));
+
+
         }
         else if (_vertical != 0)
         {
@@ -66,6 +73,16 @@ public class PlayerMovement : MonoBehaviour
      
     }
 
+    public void PlayFootstepSound() 
+    {
+        if (Time.time - _lastFootstepTime >= _footstepCooldown)
+        {
+            SoundFXManager.Instance.PlayRandomSoundFXClip(footstepAudio.ToArray(), transform, 0.5f);
+            _lastFootstepTime = Time.time;
+        }
+
+    }
+
     private void Flip()
     {
         // debugging
@@ -74,4 +91,5 @@ public class PlayerMovement : MonoBehaviour
         _facingLeft = !_facingLeft;
         _sr.flipX = _facingLeft;
     }
+
 }

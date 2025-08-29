@@ -81,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,10 +109,10 @@ TextureImporter:
       name: Guard Idle_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 18
-        width: 15
-        height: 51
+        x: 11
+        y: 6
+        width: 6
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: Guard Idle_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 18
-        width: 15
-        height: 50
+        x: 109
+        y: 6
+        width: 7
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,10 +153,10 @@ TextureImporter:
       name: Guard Idle_2
       rect:
         serializedVersion: 2
-        x: 209
-        y: 18
-        width: 15
-        height: 51
+        x: 207
+        y: 6
+        width: 6
+        height: 16
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5c6a51afb1e9d1443a828f3a1ccfe05e
+    spriteID: 9fb58b9164600d94e8f8351c27f7e091
     internalID: 0
     vertices: []
     indices: 

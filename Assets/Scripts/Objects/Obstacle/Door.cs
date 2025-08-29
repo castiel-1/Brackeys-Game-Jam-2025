@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    [SerializeField] private AudioClip _doorLocked;
+    [SerializeField] private AudioClip _doorUnlock;
+
     private InventoryController _inventoryController;
 
     private bool _isLocked = true;
@@ -17,6 +20,8 @@ public class Door : MonoBehaviour, IInteractable
     {
         if (_inventoryController.HasItem("key"))
         {
+            SoundFXManager.Instance.PlaySoundFXClip(_doorUnlock, transform, 0.07f);
+
             Unlock();
             _inventoryController.RemoveItemFromInventory("key");
 
@@ -24,6 +29,8 @@ public class Door : MonoBehaviour, IInteractable
         }
         else
         {
+            SoundFXManager.Instance.PlaySoundFXClip(_doorLocked, transform, 0.07f);
+
             return "It's locked...";
         }
         

@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _visionCone: {fileID: 1130055739660094900}
   _viewDirection: {x: -1, y: 0}
+  _lookInDirectionOfRotation: 0
   _viewAngle: 45
   _viewDistance: 10
   _alertValue: 40

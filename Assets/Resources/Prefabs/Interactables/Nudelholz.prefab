@@ -102,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemName: nudelholz
+  _pickupSound: {fileID: 8300000, guid: ed184a622c40e364ea9f9256867550e9, type: 3}
+  _volume: 0.1
 --- !u!58 &1564726101457200648
 CircleCollider2D:
   m_ObjectHideFlags: 0
