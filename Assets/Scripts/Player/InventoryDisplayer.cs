@@ -7,8 +7,7 @@ public class InventoryDisplayer : MonoBehaviour
     [SerializeField] private GameObject _itemUIPrefab;
 
     private GameObject _itemContainer;
-    private Dictionary<string, GameObject> _itemUIDict = new();
-
+    private Dictionary<string, List<GameObject>> _itemUIDict = new();
 
     private void Awake()
     {
@@ -29,20 +28,37 @@ public class InventoryDisplayer : MonoBehaviour
 
     public void SpawnItemInUI(string item, Sprite sprite)
     {
-
         GameObject itemUI = Instantiate(_itemUIPrefab, _itemContainer.transform);
         itemUI.transform.GetChild(1).GetComponent<Image>().sprite = sprite;
 
-        _itemUIDict.Add(item, itemUI);
+        if (_itemUIDict.ContainsKey(item))
+        {
+            _itemUIDict[item].Add(itemUI);
+        }
+        else
+        {
+            List<GameObject> itemsGO = new();
+            itemsGO.Add(itemUI);
+            _itemUIDict[item] = itemsGO;
+        }
+
     }
 
     public void DespawnItemInUI(string item)
     {
-        GameObject itemUI = _itemUIDict[item];
+        GameObject itemUI = _itemUIDict[item][0];
 
         Destroy(itemUI);
 
-        _itemUIDict.Remove(item);   
+        if (_itemUIDict[item].Count > 0)
+        {
+            _itemUIDict[item].RemoveAt(0);
+        }
+        else
+        {
+            _itemUIDict.Remove(item);
+        }
+
     }
 
 }
