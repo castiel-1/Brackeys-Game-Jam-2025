@@ -239,8 +239,8 @@ TextureImporter:
       name: Office Objects_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 96
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -261,8 +261,8 @@ TextureImporter:
       name: Office Objects_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
+        x: 112
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -283,7 +283,7 @@ TextureImporter:
       name: Office Objects_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -305,7 +305,7 @@ TextureImporter:
       name: Office Objects_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 64
         width: 16
         height: 16
@@ -327,8 +327,8 @@ TextureImporter:
       name: Office Objects_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -349,8 +349,8 @@ TextureImporter:
       name: Office Objects_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 48
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -371,8 +371,8 @@ TextureImporter:
       name: Office Objects_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
+        x: 96
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -393,8 +393,8 @@ TextureImporter:
       name: Office Objects_11
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
+        x: 112
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -416,7 +416,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -438,7 +438,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -460,7 +460,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -482,7 +482,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 32
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -503,7 +503,7 @@ TextureImporter:
       name: Office Objects_16
       rect:
         serializedVersion: 2
-        x: 112
+        x: 0
         y: 32
         width: 16
         height: 16
@@ -525,7 +525,7 @@ TextureImporter:
       name: Office Objects_17
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 32
         width: 16
         height: 16
@@ -547,7 +547,7 @@ TextureImporter:
       name: Office Objects_18
       rect:
         serializedVersion: 2
-        x: 144
+        x: 64
         y: 32
         width: 16
         height: 16
@@ -569,8 +569,8 @@ TextureImporter:
       name: Office Objects_19
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
+        x: 80
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -591,8 +591,8 @@ TextureImporter:
       name: Office Objects_20
       rect:
         serializedVersion: 2
-        x: 96
-        y: 16
+        x: 112
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -613,8 +613,8 @@ TextureImporter:
       name: Office Objects_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 128
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -635,8 +635,8 @@ TextureImporter:
       name: Office Objects_22
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 144
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -657,8 +657,8 @@ TextureImporter:
       name: Office Objects_23
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -679,8 +679,8 @@ TextureImporter:
       name: Office Objects_24
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 96
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -701,7 +701,7 @@ TextureImporter:
       name: Office Objects_25
       rect:
         serializedVersion: 2
-        x: 80
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -723,7 +723,7 @@ TextureImporter:
       name: Office Objects_26
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 0
         width: 16
         height: 16
@@ -745,7 +745,7 @@ TextureImporter:
       name: Office Objects_27
       rect:
         serializedVersion: 2
-        x: 112
+        x: 48
         y: 0
         width: 16
         height: 16
@@ -767,7 +767,7 @@ TextureImporter:
       name: Office Objects_28
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
         width: 16
         height: 16
@@ -789,7 +789,7 @@ TextureImporter:
       name: Office Objects_29
       rect:
         serializedVersion: 2
-        x: 144
+        x: 80
         y: 0
         width: 16
         height: 16
@@ -803,6 +803,94 @@ TextureImporter:
       bones: []
       spriteID: 2aea90e4af9f3394d99b651344ae05a3
       internalID: 396923517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Objects_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120a6a07b1169f04eb4be814669eae93
+      internalID: 30555238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Objects_31
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e96cb3f043f4840ab41790e9b83ba8
+      internalID: 1229115134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Objects_32
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdd51e99e293244a94e056329086a64
+      internalID: 1110797800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office Objects_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982886b85c2702142a0c4cda96b0f57b
+      internalID: 1991311427
       vertices: []
       indices: 
       edges: []
@@ -845,6 +933,10 @@ TextureImporter:
       Office Objects_28: -1746383502
       Office Objects_29: 396923517
       Office Objects_3: -2879702360329425139
+      Office Objects_30: 30555238
+      Office Objects_31: 1229115134
+      Office Objects_32: 1110797800
+      Office Objects_33: 1991311427
       Office Objects_4: -3368325388626936100
       Office Objects_5: 1567755112828261258
       Office Objects_6: -5170934432151652536

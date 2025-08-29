@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour, IInteractable
     [SerializeField] private VisionCone _visionCone;
     [SerializeField] private Vector2 _viewDirection;
     [SerializeField] private SpriteRenderer _sr;
+    [SerializeField] private AudioClip _hitSound;
+    [SerializeField] private float _volume = 0.2f;
 
     private bool _isKnockedOut = false;
     private Animator _animator;
@@ -66,6 +68,8 @@ public class Enemy : MonoBehaviour, IInteractable
     {
         // debugging
         Debug.Log("enemy knocked out");
+
+        SoundFXManager.Instance.PlaySoundFXClip(_hitSound, transform, _volume);
 
         if (!_isKnockedOut)
         {
