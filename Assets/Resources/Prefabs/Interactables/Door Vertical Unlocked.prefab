@@ -154,4 +154,4 @@ MonoBehaviour:
   _doorClosed: {fileID: -3361930577751218420, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
   _doorOpenRight: {fileID: 9136527021535228417, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
   _doorOpenLeft: {fileID: 1406759970369104097, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
-  _facingRight: 1
+  _facingRight: 0
