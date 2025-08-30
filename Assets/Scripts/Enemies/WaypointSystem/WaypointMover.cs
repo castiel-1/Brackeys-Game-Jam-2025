@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WaypointMover : MonoBehaviour
@@ -62,7 +63,7 @@ public class WaypointMover : MonoBehaviour
             // if the target waypoint has a wait time...
             if(currentWaypoint.WaitTime != 0)
             {
-                StartCoroutine(WaitAtWaypointRoutine(currentWaypoint.WaitTime));
+                StartCoroutine(WaitAtWaypointRoutine(currentWaypoint.WaitTime, currentWaypoint.ViewDirectionWhileWait));
             }
 
             int prevIndex = _currentIndex;
@@ -112,16 +113,18 @@ public class WaypointMover : MonoBehaviour
         }
     }
 
-    IEnumerator WaitAtWaypointRoutine(float duration)
+    IEnumerator WaitAtWaypointRoutine(float duration, Vector2 viewDirectionWhileWaiting)
     {
         _isWaiting = true;
-
         _animator.SetBool("isMoving", false);
+
+        OnMovingToWaypoint?.Invoke(viewDirectionWhileWaiting); // update view direction while waiting
 
         yield return new WaitForSeconds(duration);
 
-        _isWaiting = false;
+        OnMovingToWaypoint?.Invoke(_viewDirection); // reset it to the view direction we had figured out before
 
+        _isWaiting = false;
         _animator.SetBool("isMoving", true);
     }
 }
