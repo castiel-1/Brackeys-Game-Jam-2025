@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 3df26a66e399b0a4fba8a75dec52f40c
+guid: a0195cf76f65dea43b716a9dd122701d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3129850332413472236
-    second: Background_Clouds_0
+      213: 1404028623067837608
+    second: Logo_0
   - first:
-      213: 1227055566895339775
-    second: Background_Clouds_1
+      213: 6795467416601567747
+    second: Logo_1
   - first:
-      213: -5354000414120035780
-    second: Background_Clouds_2
+      213: 6875538535012287733
+    second: Logo_2
   - first:
-      213: -3332703609976243074
-    second: Background_Clouds_3
+      213: 2381070441135384947
+    second: Logo_3
   - first:
-      213: 559992436202996343
-    second: Background_Clouds_4
+      213: -3774021269495190454
+    second: Logo_4
   - first:
-      213: -8383542848197056660
-    second: Background_Clouds_5
+      213: 6893372319333685202
+    second: Logo_5
+  - first:
+      213: 5409054819110567409
+    second: Logo_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background_Clouds_0
+      name: Logo_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 186
-        width: 93
-        height: 84
+        x: 141
+        y: 185
+        width: 34
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ceda4af6b467f6b20800000000000000
-      internalID: 3129850332413472236
+      spriteID: 8a47074089c1c7310800000000000000
+      internalID: 1404028623067837608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background_Clouds_1
+      name: Logo_1
       rect:
         serializedVersion: 2
-        x: 173
-        y: 243
-        width: 148
-        height: 27
+        x: 172
+        y: 126
+        width: 132
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff856707980670110800000000000000
-      internalID: 1227055566895339775
+      spriteID: 30227498c995e4e50800000000000000
+      internalID: 6795467416601567747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background_Clouds_2
+      name: Logo_2
       rect:
         serializedVersion: 2
-        x: 398
-        y: 173
-        width: 82
-        height: 97
+        x: 302
+        y: 185
+        width: 39
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3ab4157df4c2b5b0800000000000000
-      internalID: -5354000414120035780
+      spriteID: 5f4cae29ed1da6f50800000000000000
+      internalID: 6875538535012287733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background_Clouds_3
+      name: Logo_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 85
-        height: 69
+        x: 114
+        y: 126
+        width: 33
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7c34b169bbdfb1d0800000000000000
-      internalID: -3332703609976243074
+      spriteID: 379ae0563f24b0120800000000000000
+      internalID: 2381070441135384947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background_Clouds_4
+      name: Logo_4
       rect:
         serializedVersion: 2
-        x: 149
-        y: 0
-        width: 160
-        height: 28
+        x: 146
+        y: 128
+        width: 39
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77209cc572e75c700800000000000000
-      internalID: 559992436202996343
+      spriteID: a4c68f8a6abff9bc0800000000000000
+      internalID: -3774021269495190454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background_Clouds_5
+      name: Logo_5
       rect:
         serializedVersion: 2
-        x: 415
-        y: 0
-        width: 65
-        height: 42
+        x: 302
+        y: 128
+        width: 39
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +243,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c67a2fd823ca7ab80800000000000000
-      internalID: -8383542848197056660
+      spriteID: 2d7156e0a9d2aaf50800000000000000
+      internalID: 6893372319333685202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 128
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd33b713b2d01b40800000000000000
+      internalID: 5409054819110567409
       vertices: []
       indices: 
       edges: []
@@ -260,12 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Background_Clouds_0: 3129850332413472236
-      Background_Clouds_1: 1227055566895339775
-      Background_Clouds_2: -5354000414120035780
-      Background_Clouds_3: -3332703609976243074
-      Background_Clouds_4: 559992436202996343
-      Background_Clouds_5: -8383542848197056660
+      Logo_0: 1404028623067837608
+      Logo_1: 6795467416601567747
+      Logo_2: 6875538535012287733
+      Logo_3: 2381070441135384947
+      Logo_4: -3774021269495190454
+      Logo_5: 6893372319333685202
+      Logo_6: 5409054819110567409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

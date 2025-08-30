@@ -42,7 +42,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1605336744810308380, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
       propertyPath: m_Name
-      value: EndOfLevelTwoTrigger
+      value: recipe
       objectReference: {fileID: 0}
     - target: {fileID: 2851699219678566073, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
       propertyPath: m_Sprite

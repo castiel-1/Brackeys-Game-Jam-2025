@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b12b0c91fa2a65441b083b8e2639a681
+guid: f526319f2b5b5834a9823532e956e19d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -686496632366981913
-    second: DarkBackground_Empty_Sign_Small_0
+      213: -780270719354799666
+    second: DarkBackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DarkBackground_Empty_Sign_Small_0
+      name: DarkBackground_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ec934833f21976f0800000000000000
-      internalID: -686496632366981913
+      spriteID: ec9f7303aebeb25f0800000000000000
+      internalID: -780270719354799666
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DarkBackground_Empty_Sign_Small_0: -686496632366981913
+      DarkBackground_0: -780270719354799666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

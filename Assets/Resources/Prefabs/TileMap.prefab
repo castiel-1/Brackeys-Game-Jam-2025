@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7515679080470745888}
   - component: {fileID: 8377225008487047614}
   - component: {fileID: 91917512722353174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1160,7 +1160,7 @@ GameObject:
   - component: {fileID: 7250841160347408907}
   - component: {fileID: 1174493203957424594}
   - component: {fileID: 4753267976445432765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collision - in front of other col
   m_TagString: Untagged
   m_Icon: {fileID: 0}

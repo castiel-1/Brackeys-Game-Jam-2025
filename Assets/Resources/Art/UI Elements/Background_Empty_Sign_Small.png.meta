@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Background_Empty_Sign_Small_0: 969291599787630036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
