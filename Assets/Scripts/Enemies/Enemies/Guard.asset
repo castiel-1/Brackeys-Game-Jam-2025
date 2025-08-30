@@ -18,4 +18,4 @@ MonoBehaviour:
   viewDistance: 10
   knockoutDuration: 120
   minimumAlertRaiseSpeed: 30
-  maximumAlertRaiseSpeed: 60
+  maximumAlertRaiseSpeed: 120
