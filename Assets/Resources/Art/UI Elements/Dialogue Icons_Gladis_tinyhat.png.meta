@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dialogue Icons_Gladis_tinyhat_0: -6572340508600346041
+      Dialogue Icons_Gladis_tinyhat_1: -5467481567161912313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

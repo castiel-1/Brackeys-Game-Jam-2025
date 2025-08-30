@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dialogue Icons_Phil_0: 8103204576882501781
+      Dialogue Icons_Phil_1: 8728342183144856518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

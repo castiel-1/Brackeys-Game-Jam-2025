@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dialogue Icons_Gladis_0: -4005218313241166987
+      Dialogue Icons_Gladis_1: -8519703322232307101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
