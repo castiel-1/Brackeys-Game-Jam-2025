@@ -107,4 +107,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("game quit");
     }
 
+    public int GetCurrentLevel()
+    {
+        return _currentLevel;
+    }
+
 }

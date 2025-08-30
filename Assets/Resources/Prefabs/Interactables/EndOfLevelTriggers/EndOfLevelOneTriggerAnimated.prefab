@@ -84,6 +84,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndOfLevelOneTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8903991529816754212, guid: 295561b0b8543064c99fb06538379c28, type: 3}
+      propertyPath: m_Radius
+      value: 0.43749997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903991529816754212, guid: 295561b0b8543064c99fb06538379c28, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903991529816754212, guid: 295561b0b8543064c99fb06538379c28, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
