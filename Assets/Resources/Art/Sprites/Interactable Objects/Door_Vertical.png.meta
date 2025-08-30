@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 5456d531608102a4a8fef8ba1bbb8835
+guid: a07fd370ecb48a648acb8b61db5dc00a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6572340508600346041
-    second: Dialogue Icons_Gladis_tinyhat_0
+      213: 8908387078811565313
+    second: Door_Vertical_0
   - first:
-      213: -5467481567161912313
-    second: Dialogue Icons_Gladis_tinyhat_1
+      213: 1406759970369104097
+    second: Door_Vertical_1
+  - first:
+      213: -5274125219615236943
+    second: Door_Vertical_2
+  - first:
+      213: 9136527021535228417
+    second: Door_Vertical_3
+  - first:
+      213: -3361930577751218420
+    second: Door_Vertical_4
+  - first:
+      213: -3924002542577196589
+    second: Door_Vertical_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -77,7 +89,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -103,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dialogue Icons_Gladis_tinyhat_0
+      name: Door_Vertical_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 23
-        height: 23
+        x: 5
+        y: 5
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74a57f1112b5ac4a0800000000000000
-      internalID: -6572340508600346041
+      spriteID: 10d3e3a79d2f0ab70800000000000000
+      internalID: 8908387078811565313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dialogue Icons_Gladis_tinyhat_1
+      name: Door_Vertical_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 4
-        width: 23
-        height: 23
+        x: 89
+        y: 5
+        width: 13
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +152,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 704715d8b7a9f14b0800000000000000
-      internalID: -5467481567161912313
+      spriteID: 1e8e61e5db0d58310800000000000000
+      internalID: 1406759970369104097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door_Vertical_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 5
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc97e76e0b8ec6b0800000000000000
+      internalID: -5274125219615236943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door_Vertical_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 5
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1027d5f2be67bce70800000000000000
+      internalID: 9136527021535228417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door_Vertical_4
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 5
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c076d99a3f50851d0800000000000000
+      internalID: -3361930577751218420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door_Vertical_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 5
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1e4ff4a742b89c0800000000000000
+      internalID: -3924002542577196589
       vertices: []
       indices: 
       edges: []
@@ -150,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8824910f39c82c34b8b088b10961185c
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dialogue Icons_Gladis_tinyhat_0: -6572340508600346041
-      Dialogue Icons_Gladis_tinyhat_1: -5467481567161912313
+      Door_Vertical_0: 8908387078811565313
+      Door_Vertical_1: 1406759970369104097
+      Door_Vertical_2: -5274125219615236943
+      Door_Vertical_3: 9136527021535228417
+      Door_Vertical_4: -3361930577751218420
+      Door_Vertical_5: -3924002542577196589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
