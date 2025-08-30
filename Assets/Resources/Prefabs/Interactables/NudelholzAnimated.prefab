@@ -44,17 +44,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nudelholz
       objectReference: {fileID: 0}
+    - target: {fileID: 6729316104876262400, guid: 7a39ac878238918458479faf98ecf2ce, type: 3}
+      propertyPath: _volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8002525841415882731, guid: 7a39ac878238918458479faf98ecf2ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3526368
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002525841415882731, guid: 7a39ac878238918458479faf98ecf2ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4113483
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002525841415882731, guid: 7a39ac878238918458479faf98ecf2ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06356967
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8002525841415882731, guid: 7a39ac878238918458479faf98ecf2ce, type: 3}
       propertyPath: m_LocalRotation.w

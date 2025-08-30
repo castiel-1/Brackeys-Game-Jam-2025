@@ -2,64 +2,66 @@ using UnityEngine;
 
 public class UnlockedDoor : MonoBehaviour, IInteractable
 {
-    [SerializeField] private AudioClip _doorLocked;
-    [SerializeField] private AudioClip _doorUnlock;
-    [SerializeField] private bool horizontal;
+    [SerializeField] private AudioClip _doorOpenAudio;
+    [SerializeField] private AudioClip _doorCloseAudio;
+    [SerializeField] private float _volume = 0.2f;
 
-    private InventoryController _inventoryController;
+    [SerializeField] private bool _horizontal;
 
-    private bool _isLocked = true;
-    private Animator _animator;
+    [SerializeField] private Sprite _doorClosed;
+    [SerializeField] private Sprite _doorOpenRight;
+    [SerializeField] private Sprite _doorOpenLeft;
+    [SerializeField] private bool _facingRight;
 
-    private void Awake()
-    {
-        _inventoryController = FindFirstObjectByType<InventoryController>();
-        _animator = GetComponentInChildren<Animator>();
-    }
+    private bool _open = false;
 
     public string Interact()
     {
-        if (_inventoryController.HasItem("key"))
+        bool opened = ToggleDoor();
+
+        if (opened)
         {
-            SoundFXManager.Instance.PlaySoundFXClip(_doorUnlock, transform, 0.07f);
-
-            Unlock();
-            _inventoryController.RemoveItemFromInventory("key");
-
-            return "Door unlocked!";
+            SoundFXManager.Instance.PlaySoundFXClip(_doorOpenAudio, transform, _volume);
+            return "Door opened!";
         }
         else
         {
-            SoundFXManager.Instance.PlaySoundFXClip(_doorLocked, transform, 0.07f);
-
-            return "It's locked...";
+            SoundFXManager.Instance.PlaySoundFXClip(_doorCloseAudio, transform, _volume);
+            return "Door closed!";
         }
-        
+
     }
 
     public bool CanInteract()
     {
-        return _isLocked;
+        return true;
     }
 
-    // unlock AND open door 
-    private void Unlock()
+    private bool ToggleDoor() // if true -> opened, else -> closed
     {
-        // debugging
-        Debug.Log("opened door");
+        _open = !_open;
 
-        _isLocked = false;
-        _animator.SetBool("isOpen", true);
-
-        if (horizontal)
+        if(_open)
         {
-            //disable GO to reveal open frame from tilemap
-            gameObject.SetActive(false);
+            if (_horizontal)
+            {
+                GetComponent<SpriteRenderer>().sprite = null;
+                GetComponent<BoxCollider2D>().isTrigger = true;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().sprite = _facingRight ? _doorOpenRight : _doorOpenLeft;
+                GetComponent<BoxCollider2D>().isTrigger = true;
+            }
+
+            return true;
         }
         else
         {
-            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<SpriteRenderer>().sprite = _doorClosed;
+            GetComponent<BoxCollider2D>().isTrigger = false;
+
+            return false;
         }
-     
     }
 }
