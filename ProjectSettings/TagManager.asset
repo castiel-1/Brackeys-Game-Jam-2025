@@ -55,6 +55,9 @@ TagManager:
   - name: Collision - in front of other col
     uniqueID: 1864248867
     locked: 0
+  - name: Walk In Front Of - over col
+    uniqueID: 1625600755
+    locked: 0
   - name: Player
     uniqueID: 881212713
     locked: 0

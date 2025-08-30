@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,8 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     private int _currentLevel = 0;
-    private int _storyIndex = 0;
-    private bool _isPaused = false;
+
+    private PlayerMovement _playerMovement;
+    private Enemy[] _enemies;
 
     private void Awake()
     {
@@ -21,7 +23,6 @@ public class GameManager : MonoBehaviour
             transform.parent = null;
             DontDestroyOnLoad(gameObject);
         }
-
     }
 
     public void PauseGame()
@@ -30,7 +31,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("paused game");
 
         Time.timeScale = 0f;  
-        _isPaused = true;
     }
 
     public void ResumeGame()
@@ -39,35 +39,52 @@ public class GameManager : MonoBehaviour
         Debug.Log("resumed game");
 
         Time.timeScale = 1f; 
-        _isPaused = false;
+    }
+
+    public void PauseMovement()
+    {
+        _playerMovement = FindFirstObjectByType<PlayerMovement>();
+        _enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+
+        _playerMovement.enabled = false;
+        
+        foreach(Enemy enemy in _enemies)
+        {
+            enemy.GetComponentInChildren<WaypointMover>().enabled = false;
+            enemy.GetComponentInChildren<VisionCone>().enabled = false;
+        }
+    }
+
+    public void ResumeMovement()
+    {
+        _playerMovement = FindFirstObjectByType<PlayerMovement>();
+        _enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
+
+        _playerMovement.enabled = true;
+
+        foreach(Enemy enemy in _enemies)
+        {
+            enemy.GetComponentInChildren<WaypointMover>().enabled = true;
+            enemy.GetComponentInChildren<VisionCone>().enabled = true;
+        }
     }
 
     public void LoadNextLevel()
     {
         SceneManager.LoadScene("Level " + _currentLevel);
         _currentLevel++;
-        _storyIndex++;
-    }
-
-    // loads the next story slide
-    public void LoadNextStory()
-    {
-        SceneManager.LoadScene("Story " + _storyIndex);
-        _storyIndex++;
     }
 
     public void LoadLevel(int index)
     {
         SceneManager.LoadScene("Level " + index);
         _currentLevel = index;
-        _storyIndex = index + 1;
     }
 
     public void LoadStartScreen()
     {
         SceneManager.LoadScene("StartScreen");
         _currentLevel = 0;
-        _storyIndex = 0;
     }
 
     public void GameOverScreen()
@@ -77,6 +94,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Debug.Log("current level: " + _currentLevel);
+
         SceneManager.LoadScene("Level " + _currentLevel);
     }
 
