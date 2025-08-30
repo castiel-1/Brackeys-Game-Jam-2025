@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Villain
   m_EditorClassIdentifier: 
   characterName: Gladis
-  sprite: {fileID: 0}
+  sprite: {fileID: -4005218313241166987, guid: a415628b1d578984e96880d69173ceb4, type: 3}
   typingSpeed: 20

@@ -14,7 +14,7 @@ public class EndOfLevel : MonoBehaviour, IInteractable
     {
         SoundFXManager.Instance.PlaySoundFXClip(_pickupClip, transform, _volume);
 
-        GameManager.Instance.LoadNextStory();
+        GameManager.Instance.LoadNextLevel();
 
         return "";
     }

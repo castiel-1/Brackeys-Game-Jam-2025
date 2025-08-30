@@ -247,7 +247,7 @@ MonoBehaviour:
   _viewDirection: {x: 1, y: 0}
   _sr: {fileID: 8003297312599951257}
   _hitSound: {fileID: 8300000, guid: 591a26887b56436419be0e1abf79ba95, type: 3}
-  _volume: 0.2
+  _volume: 0.1
 --- !u!114 &3379531900672054487
 MonoBehaviour:
   m_ObjectHideFlags: 0

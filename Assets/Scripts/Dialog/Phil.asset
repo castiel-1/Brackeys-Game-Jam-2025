@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Phil
   m_EditorClassIdentifier: 
   characterName: Phil
-  sprite: {fileID: 0}
+  sprite: {fileID: 8103204576882501781, guid: ca5175857d678a44ba339ce3e6d3ebf4, type: 3}
   typingSpeed: 20

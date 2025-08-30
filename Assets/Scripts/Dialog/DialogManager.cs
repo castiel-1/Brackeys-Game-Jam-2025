@@ -17,7 +17,6 @@ public class DialogManager : MonoBehaviour
 
     private Dictionary<int, DialogParticipantSO> _participantIDDict = new();
 
- 
     private void Start()
     {
         // create characterID to speaker dict
@@ -31,6 +30,8 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog()
     {
+        GameManager.Instance.PauseMovement();
+
         dialogParent.SetActive(true);
 
         StartCoroutine(RunDialog());
@@ -60,6 +61,8 @@ public class DialogManager : MonoBehaviour
         }
 
         dialogParent.SetActive(false);
+
+        GameManager.Instance.ResumeMovement();
     }
 
     IEnumerator TypeLines(string line, float waitTime)
