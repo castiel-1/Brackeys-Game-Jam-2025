@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Factory Decorations_69
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1675834053, guid: 09a0b87768665744187a898ad9dd2caf, type: 3}
+  m_Sprite: {fileID: 3462176962905728775, guid: 09a0b87768665744187a898ad9dd2caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
