@@ -24,8 +24,6 @@ public class DialogManager : MonoBehaviour
         {
             _participantIDDict.Add(participantInfo.characterID, participantInfo.participant);
         }
-
-        StartDialog();
     }
 
     public void StartDialog()

@@ -44,6 +44,70 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndOfLevelTwoTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 2851699219678566073, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2245653945540024764, guid: 7ea9b3a832b3ad8488e4924b73ff90b9, type: 3}
+    - target: {fileID: 2851699219678566073, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851699219678566073, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851699219678566073, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893159335732797572, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168658230943562800, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168658230943562800, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168658230943562800, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7168658230943562800, guid: eb1bcde11bc7b8c4cb39c3b0d865789e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
