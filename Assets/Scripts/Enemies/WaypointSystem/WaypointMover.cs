@@ -123,9 +123,17 @@ public class WaypointMover : MonoBehaviour
         _animator.SetBool("isMoving", false);
 
         // face the forced direction while waiting
-        _viewDirection = viewDirectionWhileWaiting.normalized;
-        OnMovingToWaypoint?.Invoke(_viewDirection);
-
+        if(viewDirectionWhileWaiting != Vector2.zero)
+        {
+            _viewDirection = viewDirectionWhileWaiting.normalized;
+            OnMovingToWaypoint?.Invoke(_viewDirection);
+        }
+        else
+        {
+            _viewDirection = (nextTargetPos - (Vector2)transform.position).normalized;
+            OnMovingToWaypoint?.Invoke(_viewDirection);
+        }
+    
         yield return new WaitForSeconds(duration);
 
         // after waiting, look toward next waypoint
