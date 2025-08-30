@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
+    [SerializeField] private string _keyName;
     [SerializeField] private AudioClip _doorLocked;
     [SerializeField] private AudioClip _doorUnlock;
     [SerializeField] private bool horizontal;
@@ -21,12 +22,12 @@ public class Door : MonoBehaviour, IInteractable
 
     public string Interact()
     {
-        if (_inventoryController.HasItem("key"))
+        if (_inventoryController.HasItem(_keyName))
         {
             SoundFXManager.Instance.PlaySoundFXClip(_doorUnlock, transform, 0.07f);
 
             Unlock();
-            _inventoryController.RemoveItemFromInventory("key");
+            _inventoryController.RemoveItemFromInventory(_keyName);
 
             return "Door unlocked!";
         }

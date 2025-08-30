@@ -6,6 +6,7 @@ public class VisionCone : MonoBehaviour
 {
     public event Action<float> OnPlayerInVisionCone;
 
+    [SerializeField] private float _offset = 0f;
     [SerializeField] private int _rayCount = 10; // how many rays we draw all together
     [SerializeField] private LayerMask _blockVisionLayer;
     [SerializeField] private LayerMask _playerLayer;
@@ -35,8 +36,11 @@ public class VisionCone : MonoBehaviour
 
     public void DetectPlayer()
     {
+        // start position with offset accounted for
+        Vector2 startPosition = (Vector2)transform.position + ViewDirection.normalized * _offset;
+
         // do circle raycast to see if player is in radius
-        Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(transform.position, ViewDistance, _playerLayer);
+        Collider2D[] objectsInRange = Physics2D.OverlapCircleAll(startPosition, ViewDistance, _playerLayer);
         
         // if we detect the player in range...
         if(objectsInRange.Length > 0)
@@ -61,11 +65,11 @@ public class VisionCone : MonoBehaviour
             Vector2 colliderCenter = (Vector2)target.TransformPoint(col.offset);
 
             // get direction to player
-            Vector2 dirToPlayer = colliderCenter - (Vector2) transform.position;
+            Vector2 dirToPlayer = colliderCenter - startPosition;
 
             // debugging
-            Debug.DrawRay(transform.position, dirToPlayer, Color.white);
-            Debug.DrawRay(transform.position, ViewDirection * ViewDistance, Color.cyan);
+            Debug.DrawRay(startPosition, dirToPlayer, Color.white);
+            Debug.DrawRay(startPosition, ViewDirection * ViewDistance, Color.cyan);
 
             // convert to angle
             float angleToPlayer = Vector2.Angle(ViewDirection, dirToPlayer);
@@ -85,12 +89,12 @@ public class VisionCone : MonoBehaviour
                 Vector2 dirToFeet = dirToPlayer - new Vector2(0, colliderHeight/2f);
 
                 // debugging
-                Debug.DrawRay(transform.position, dirToHead, Color.yellow);
-                Debug.DrawRay(transform.position, dirToFeet, Color.green);
+                Debug.DrawRay(startPosition, dirToHead, Color.yellow);
+                Debug.DrawRay(startPosition, dirToFeet, Color.green);
 
                 // if nothing between guard and player head or player feet...
-                if (!Physics2D.Raycast(transform.position, dirToHead, distanceToPlayer, _blockVisionLayer) ||
-                    !Physics2D.Raycast(transform.position, dirToFeet, distanceToPlayer, _blockVisionLayer))
+                if (!Physics2D.Raycast(startPosition, dirToHead, distanceToPlayer, _blockVisionLayer) ||
+                    !Physics2D.Raycast(startPosition, dirToFeet, distanceToPlayer, _blockVisionLayer))
                 {
                     // tell enemy that player is being detected
                     OnPlayerInVisionCone?.Invoke(distanceToPlayer);
@@ -109,21 +113,24 @@ public class VisionCone : MonoBehaviour
         Vector3[] vertices = new Vector3[_rayCount + 1];
         int[] triangles = new int[(_rayCount - 1) * 3];
 
-        vertices[0] = Vector3.zero;
+        vertices[0] = transform.InverseTransformPoint(transform.position + (Vector3)ViewDirection.normalized * _offset);
 
         int vertexIndex = 1;
         int triangleIndex = 0;
 
         for (int i = 0; i < _rayCount; i++)
         {
-            RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, DirFromAngle(angle), ViewDistance, _blockVisionLayer);
+            // start position with offset accounted for
+            Vector2 startPosition = (Vector2)transform.position + ViewDirection.normalized * _offset;
+
+            RaycastHit2D hitInfo = Physics2D.Raycast(startPosition, DirFromAngle(angle), ViewDistance, _blockVisionLayer);
 
             Vector3 vertex;
 
             // if no hit...
             if(hitInfo.collider == null)
             {
-                vertex = transform.InverseTransformPoint(transform.position + DirFromAngle(angle) * ViewDistance);
+                vertex = transform.InverseTransformPoint(startPosition + (Vector2)DirFromAngle(angle) * ViewDistance);
 
             }
             // if hit...
