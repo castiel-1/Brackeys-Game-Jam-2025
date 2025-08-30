@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DarkBackground_Empty_Sign_Small_0: -686496632366981913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
