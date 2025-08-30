@@ -1,22 +1,20 @@
 using UnityEngine;
 
-public class Door : MonoBehaviour, IInteractable
+public class UnlockedDoor : MonoBehaviour, IInteractable
 {
     [SerializeField] private AudioClip _doorLocked;
     [SerializeField] private AudioClip _doorUnlock;
     [SerializeField] private bool horizontal;
 
-    [SerializeField] private bool facingRight;
-    [SerializeField] private Sprite _doorOpenLeft;
-    [SerializeField] private Sprite _doorOpenRight;
-
     private InventoryController _inventoryController;
 
     private bool _isLocked = true;
+    private Animator _animator;
 
     private void Awake()
     {
         _inventoryController = FindFirstObjectByType<InventoryController>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public string Interact()
@@ -51,6 +49,7 @@ public class Door : MonoBehaviour, IInteractable
         Debug.Log("opened door");
 
         _isLocked = false;
+        _animator.SetBool("isOpen", true);
 
         if (horizontal)
         {
@@ -60,15 +59,6 @@ public class Door : MonoBehaviour, IInteractable
         else
         {
             GetComponent<BoxCollider2D>().enabled = false;
-
-            if (facingRight)
-            {
-                GetComponent<SpriteRenderer>().sprite = _doorOpenRight;
-            }
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = _doorOpenLeft;
-            }
         }
      
     }

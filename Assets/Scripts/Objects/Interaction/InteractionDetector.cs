@@ -19,7 +19,7 @@ public class InteractionDetector : MonoBehaviour
 
             string displayMessage = _interactableInRange?.Interact();
 
-            if(displayMessage != "")
+            if(!string.IsNullOrEmpty(displayMessage))
             {
                 StartCoroutine(DisplayInteractMessageRoutine(displayMessage, _displayTime));
                 _interactionPrompt.SetActive(false);
