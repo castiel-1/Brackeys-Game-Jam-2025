@@ -151,8 +151,8 @@ MonoBehaviour:
   _lootPrefab: {fileID: 0}
   _lootSpawnLocation: {fileID: 8874884381509590203}
   _emptyLootBox: {fileID: 5246480351182715128, guid: 4c400ffe65db1434e80e4ab800288d2d, type: 3}
-  _lootSpawnSound: {fileID: 8300000, guid: c78dbfe1c9ed67047845e5f984db6f79, type: 3}
-  _volume: 0.2
+  _lootSpawnSound: {fileID: 8300000, guid: dd616d3ae96c666439b2b9189a8a01d6, type: 3}
+  _volume: 0.05
 --- !u!1 &8874884381509590203
 GameObject:
   m_ObjectHideFlags: 0

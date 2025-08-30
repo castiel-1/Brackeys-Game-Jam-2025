@@ -793,19 +793,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7720024779977465539, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_fontColor.b
-      value: 0.6117647
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720024779977465539, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_fontColor.g
-      value: 0.70980394
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720024779977465539, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_fontColor.r
-      value: 0.93333334
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7720024779977465539, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4288460270
+      value: 4294835709
       objectReference: {fileID: 0}
     - target: {fileID: 8000289362159136892, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -829,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615369686711410471, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 64.812
+      value: 71
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 737234716691884544, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
