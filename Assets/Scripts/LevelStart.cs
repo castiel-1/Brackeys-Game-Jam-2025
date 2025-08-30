@@ -34,9 +34,5 @@ public class LevelStart : MonoBehaviour
 
 
     }
-
-    private void AddNudelholzToInventory()
-    {
-
-    }
+    
 }

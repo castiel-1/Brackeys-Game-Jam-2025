@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WaypointMover : MonoBehaviour
@@ -59,12 +60,6 @@ public class WaypointMover : MonoBehaviour
         // if we are close to the target waypoint...
         if(Vector2.Distance(transform.position, position) < 0.1f)
         {
-            // if the target waypoint has a wait time...
-            if(currentWaypoint.WaitTime != 0)
-            {
-                StartCoroutine(WaitAtWaypointRoutine(currentWaypoint.WaitTime));
-            }
-
             int prevIndex = _currentIndex;
 
             // set index to next correct waypoint
@@ -101,27 +96,43 @@ public class WaypointMover : MonoBehaviour
                 }
             }
 
-            // update view direction
-            if (_currentIndex != prevIndex)
+
+            // if we need to wait at this waypoint...
+            if (currentWaypoint.WaitTime > 0)
             {
+                StartCoroutine(WaitAtWaypointRoutine(
+                    currentWaypoint.WaitTime,
+                    currentWaypoint.ViewDirectionWhileWait,
+                    _waypoints[_currentIndex].transform.position
+                ));
+            }
+            else
+            {
+                // no waiting — update look immediately
                 Vector2 newTarget = _waypoints[_currentIndex].transform.position;
                 _viewDirection = (newTarget - (Vector2)transform.position).normalized;
-
                 OnMovingToWaypoint?.Invoke(_viewDirection);
             }
+          
         }
     }
 
-    IEnumerator WaitAtWaypointRoutine(float duration)
+    IEnumerator WaitAtWaypointRoutine(float duration, Vector2 viewDirectionWhileWaiting, Vector2 nextTargetPos)
     {
         _isWaiting = true;
-
         _animator.SetBool("isMoving", false);
+
+        // face the forced direction while waiting
+        _viewDirection = viewDirectionWhileWaiting.normalized;
+        OnMovingToWaypoint?.Invoke(_viewDirection);
 
         yield return new WaitForSeconds(duration);
 
-        _isWaiting = false;
+        // after waiting, look toward next waypoint
+        _viewDirection = (nextTargetPos - (Vector2)transform.position).normalized;
+        OnMovingToWaypoint?.Invoke(_viewDirection);
 
+        _isWaiting = false;
         _animator.SetBool("isMoving", true);
     }
 }
