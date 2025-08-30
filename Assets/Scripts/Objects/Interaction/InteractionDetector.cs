@@ -21,18 +21,23 @@ public class InteractionDetector : MonoBehaviour
 
             if(displayMessage != "")
             {
-                StartCoroutine(DisplayInteractMessageRoutine(displayMessage));
+                StartCoroutine(DisplayInteractMessageRoutine(displayMessage, _displayTime));
                 _interactionPrompt.SetActive(false);
             }
         }
     }
 
-    IEnumerator DisplayInteractMessageRoutine(string message)
+    public void DisplayMessage(string message, float displayTime)
+    {
+        StartCoroutine(DisplayInteractMessageRoutine(message, displayTime));
+    }
+
+    IEnumerator DisplayInteractMessageRoutine(string message, float displayTime)
     {
         _interactMessage.SetActive(true);
         _interactMessage.GetComponentInChildren<TextMeshPro>().text = message;
 
-        yield return new WaitForSeconds(_displayTime);
+        yield return new WaitForSeconds(displayTime);
 
         _interactMessage.GetComponentInChildren<TextMeshPro>().text = "";
         _interactMessage.SetActive(false);
