@@ -68,10 +68,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.21875, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0.5}
     oldSize: {x: 0.4375, y: 1}
     newSize: {x: 1, y: 0.875}
     adaptiveTilingThreshold: 0.5
@@ -121,9 +121,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 881212713
+  m_SortingLayer: 6
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3361930577751218420, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -152,6 +152,6 @@ MonoBehaviour:
   _volume: 0.17
   _horizontal: 0
   _doorClosed: {fileID: -3361930577751218420, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
-  _doorOpenRight: {fileID: 8908387078811565313, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
-  _doorOpenLeft: {fileID: -5274125219615236943, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
-  _facingRight: 0
+  _doorOpenRight: {fileID: 9136527021535228417, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
+  _doorOpenLeft: {fileID: 1406759970369104097, guid: a07fd370ecb48a648acb8b61db5dc00a, type: 3}
+  _facingRight: 1
