@@ -25,9 +25,15 @@ public class AlertMeterManager : MonoBehaviour
     {
         if(_slider.value + amount >= _alertMeterMax)
         {
+            // debugging
+            Debug.Log("alert meter full");
+
             GameManager.Instance.GameOverScreen();
         }
 
         _slider.value += amount;
+
+        // debugging
+        Debug.Log("slider amount: " +  _slider.value);
     }
 }

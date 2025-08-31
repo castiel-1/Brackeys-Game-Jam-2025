@@ -8,6 +8,8 @@ public class BreakerBox : MonoBehaviour, IInteractable
     [SerializeField] private AudioClip _switchSound;
     [SerializeField] private float _volume = 0.2f;
 
+    [SerializeField] private bool _toggleVisionCircle = false;
+
     private bool _powerOn = true;
     private Animator _animator;
 
@@ -27,6 +29,8 @@ public class BreakerBox : MonoBehaviour, IInteractable
 
         _powerOn = !_powerOn;
         _animator.SetBool("isOn", _powerOn);
+
+        if(_toggleVisionCircle) GetComponent<ToggleVision>().ToggleLights();
 
         foreach (SecurityCamera cam in cameras)
         {

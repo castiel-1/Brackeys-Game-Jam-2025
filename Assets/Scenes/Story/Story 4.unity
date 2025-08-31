@@ -207,12 +207,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8418309814585835356, guid: 9444b95032e998d4aa6207c573ed15b6, type: 3}
       propertyPath: '_dialogParts.Array.data[2].lines.Array.data[0]'
-      value: "I know, right? The secret recipe \u2026 Who could\u2019ve known that
-        biscuits sell better if they\u2019re made with sugar? Gladis must have done
-        a whole lot of evil science to figure that out."
+      value: But now the secret is out, and we can finally sell enough to keep our
+        bakery open!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2839739869634984608, guid: 9444b95032e998d4aa6207c573ed15b6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9444b95032e998d4aa6207c573ed15b6, type: 3}

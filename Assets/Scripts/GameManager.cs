@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private int _currentLevel;
+    private int _currentLevel = 0;
 
     private PlayerMovement _playerMovement;
     private Enemy[] _enemies;
@@ -25,20 +25,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    private void OnEnable()
     {
-        // debugging
-        Debug.Log("paused game");
-
-        Time.timeScale = 0f;  
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void ResumeGame()
+    private void OnDisable()
     {
-        // debugging
-        Debug.Log("resumed game");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
-        Time.timeScale = 1f; 
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (!(scene.name == "GameOverScreen"))
+        {
+            _currentLevel = scene.buildIndex;
+
+            // debugging
+            Debug.Log("current index: " + _currentLevel);
+        }
     }
 
     public void PauseMovement()
@@ -74,14 +79,15 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        _currentLevel = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(_currentLevel + 1);
     }
 
     public void LoadStartScreen()
     {
+        // debugging
+        Debug.Log("loading start screen");
+
         SceneManager.LoadScene("StartScreen");
-        _currentLevel = 0;
     }
 
     public void GameOverScreen()
@@ -91,6 +97,9 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        // debugging
+        Debug.Log("restarting level");
+
         SceneManager.LoadScene(_currentLevel);
     }
 
