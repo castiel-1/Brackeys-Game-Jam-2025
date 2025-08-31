@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
@@ -7,6 +8,9 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    public static event Action OnDialogFinished;
+
+    [SerializeField] private AudioClip _spacebarAudio;
     [SerializeField] private GameObject dialogParent;
     [SerializeField] private Image _portraitImage;
     [SerializeField] private TextMeshProUGUI _nameText;
@@ -17,7 +21,7 @@ public class DialogManager : MonoBehaviour
 
     private Dictionary<int, DialogParticipantSO> _participantIDDict = new();
 
-    private void Start()
+    private void Awake()
     {
         // create characterID to speaker dict
         foreach (ParticipantSerializable participantInfo in _participants)
@@ -55,12 +59,15 @@ public class DialogManager : MonoBehaviour
                 yield return StartCoroutine(TypeLines(line, waitTime));
 
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                SoundFXManager.Instance.PlaySoundFXClip(_spacebarAudio, transform, 0.2f);
             }
         }
 
         dialogParent.SetActive(false);
 
         GameManager.Instance.ResumeMovement();
+
+        OnDialogFinished?.Invoke();
     }
 
     IEnumerator TypeLines(string line, float waitTime)

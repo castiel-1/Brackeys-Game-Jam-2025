@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private int _currentLevel = 0;
+    private int _currentLevel;
 
     private PlayerMovement _playerMovement;
     private Enemy[] _enemies;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         _playerMovement = FindFirstObjectByType<PlayerMovement>();
         _enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
-        _playerMovement.enabled = false;
+        if(_playerMovement) _playerMovement.enabled = false;
         
         foreach(Enemy enemy in _enemies)
         {
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         _playerMovement = FindFirstObjectByType<PlayerMovement>();
         _enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
-        _playerMovement.enabled = true;
+        if(_playerMovement) _playerMovement.enabled = true;
 
         foreach(Enemy enemy in _enemies)
         {
@@ -71,14 +71,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene("Level " + _currentLevel);
-        _currentLevel++;
-    }
-
-    public void LoadLevel(int index)
-    {
-        SceneManager.LoadScene("Level " + index);
-        _currentLevel = index;
+        _currentLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void LoadStartScreen()
@@ -94,9 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        Debug.Log("current level: " + _currentLevel);
-
-        SceneManager.LoadScene("Level " + _currentLevel);
+        SceneManager.LoadScene(_currentLevel);
     }
 
     public void QuitGame()

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Lisbeth
   sprite: {fileID: 989671217607612531, guid: 2fe12dd57738f3944b9d04ad8cb74a08, type: 3}
-  typingSpeed: 20
+  typingSpeed: 40

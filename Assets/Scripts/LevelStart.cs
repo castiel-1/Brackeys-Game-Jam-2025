@@ -3,36 +3,45 @@ using UnityEngine.SceneManagement;
 
 public class LevelStart : MonoBehaviour
 {
-    // things to do on level start...
-
-    /* 1. dialog
-     * 2. speech bubble with hints/that tells you what to do
-     * 3. add nudelholz after level 1
-     * 
-     * 
-     */
 
     [SerializeField] private Sprite _nudelholzSprite;
+    [SerializeField] private bool _hasNudelholz;
+    [SerializeField] private bool _startDialog;
 
     private DialogManager _dialogManager;
     private InventoryController _inventoryController;
-    
+
+    private void OnEnable()
+    {
+        DialogManager.OnDialogFinished += AfterDialog;
+    }
+
+    private void OnDisable()
+    {
+        DialogManager.OnDialogFinished -= AfterDialog;
+    }
 
     private void Start()
     {
-        // start dialog
-        _dialogManager = FindFirstObjectByType<DialogManager>();
-        _dialogManager.StartDialog();
-
+        if (_startDialog)
+        {
+            // start dialog
+            _dialogManager = FindFirstObjectByType<DialogManager>();
+            _dialogManager.StartDialog();
+        }
+       
         // set up inventory with Nudelholz
         _inventoryController = FindFirstObjectByType<InventoryController>();
 
-        if(GameManager.Instance.GetCurrentLevel() != 0 && _inventoryController)
+        if(_hasNudelholz &&_inventoryController)
         {
             _inventoryController.AddItemToInventory("nudelholz", _nudelholzSprite);
         }
+    }
 
-
+    private void AfterDialog()
+    {
+        GameManager.Instance.LoadNextLevel();
     }
     
 }
