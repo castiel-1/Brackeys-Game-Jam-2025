@@ -5,8 +5,11 @@ public class LevelStart : MonoBehaviour
 {
 
     [SerializeField] private Sprite _nudelholzSprite;
+    [SerializeField] private Sprite _doughSprite;
     [SerializeField] private bool _hasNudelholz;
+    [SerializeField] private bool _hasDough;
     [SerializeField] private bool _startDialog;
+    [SerializeField] private bool _loadNextSceneAfterDialog = true;
 
     private DialogManager _dialogManager;
     private InventoryController _inventoryController;
@@ -37,11 +40,19 @@ public class LevelStart : MonoBehaviour
         {
             _inventoryController.AddItemToInventory("nudelholz", _nudelholzSprite);
         }
+
+        if(_hasDough &&_inventoryController)
+        {
+            _inventoryController.AddItemToInventory("dough", _doughSprite);
+        }
     }
 
     private void AfterDialog()
     {
-        GameManager.Instance.LoadNextLevel();
+        if (_loadNextSceneAfterDialog)
+        {
+            GameManager.Instance.LoadNextLevel();
+        }
     }
     
 }

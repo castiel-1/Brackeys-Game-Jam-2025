@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400625939602851329, guid: 9444b95032e998d4aa6207c573ed15b6, type: 3}
+      propertyPath: _startDialog
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8418309814585835356, guid: 9444b95032e998d4aa6207c573ed15b6, type: 3}
       propertyPath: _dialogParts.Array.size
       value: 3

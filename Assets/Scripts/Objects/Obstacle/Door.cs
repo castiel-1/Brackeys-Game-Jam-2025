@@ -28,7 +28,16 @@ public class Door : MonoBehaviour, IInteractable
 
             Unlock();
 
-            if(!_inventoryController.HasItem("dough")) _inventoryController.RemoveItemFromInventory(_consumedKeyName);
+            if (_consumedKeyName == "dough")
+            {
+                // only remove if key is dough
+                _inventoryController.RemoveItemFromInventory("dough");
+            }
+            else if (_inventoryController.HasItem(_consumedKeyName))
+            {
+                // remove the specific key
+                _inventoryController.RemoveItemFromInventory(_consumedKeyName);
+            }
 
             return "Door unlocked!";
         }

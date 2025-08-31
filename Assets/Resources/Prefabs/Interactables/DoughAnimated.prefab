@@ -43,7 +43,15 @@ PrefabInstance:
     - target: {fileID: 507851094472040063, guid: 492199d40ff91ea408c77f00d8d155ec, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1544263421559956090, guid: ffdc5b9fa08a84772b826684b868982d, type: 3}
+      objectReference: {fileID: 7704437882951953874, guid: ffdc5b9fa08a84772b826684b868982d, type: 3}
+    - target: {fileID: 1063693195900232592, guid: 492199d40ff91ea408c77f00d8d155ec, type: 3}
+      propertyPath: m_Radius
+      value: 0.64424783
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063693195900232592, guid: 492199d40ff91ea408c77f00d8d155ec, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3863917686996765194, guid: 492199d40ff91ea408c77f00d8d155ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

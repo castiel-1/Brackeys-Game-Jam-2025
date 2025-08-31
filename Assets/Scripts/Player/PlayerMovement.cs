@@ -83,6 +83,12 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void SetPlayerSpeedZero()
+    {
+        _rb.linearVelocity = Vector2.zero;
+        _animator.SetFloat("moveMagnitude", 0);
+    }
+
     private void Flip()
     {
         // debugging

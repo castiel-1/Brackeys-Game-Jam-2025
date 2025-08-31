@@ -46,8 +46,11 @@ public class GameManager : MonoBehaviour
         _playerMovement = FindFirstObjectByType<PlayerMovement>();
         _enemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
 
-        if(_playerMovement) _playerMovement.enabled = false;
-        
+        if (_playerMovement)
+        {
+            _playerMovement.SetPlayerSpeedZero();
+            _playerMovement.enabled = false;
+        }
         foreach(Enemy enemy in _enemies)
         {
             enemy.GetComponentInChildren<WaypointMover>().enabled = false;
