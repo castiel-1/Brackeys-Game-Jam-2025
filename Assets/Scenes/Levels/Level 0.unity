@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door Horizontal
       objectReference: {fileID: 0}
+    - target: {fileID: 2281647562187311606, guid: 737adf9d09a03de44b159973f6338c3a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281647562187311606, guid: 737adf9d09a03de44b159973f6338c3a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4509659656362282201, guid: 737adf9d09a03de44b159973f6338c3a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.49
@@ -286,6 +294,18 @@ PrefabInstance:
       propertyPath: Composition.ScreenPosition.y
       value: -0.07521117
       objectReference: {fileID: 0}
+    - target: {fileID: 4243631528431153683, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243631528431153683, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.18867922
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243631528431153683, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.18867922
+      objectReference: {fileID: 0}
     - target: {fileID: 5031463226915458978, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -364,11 +384,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8872475699710058434, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4786168382932499888, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
+    - {fileID: 7715033353160612443, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8067532110690397640, guid: 9f4da4a52763ac742b1d3e41dd2de78d, type: 3}
       insertIndex: -1
